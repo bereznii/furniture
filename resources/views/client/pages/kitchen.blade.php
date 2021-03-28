@@ -2,25 +2,22 @@
 
 @section('client.pages.content')
     <main>
+
         <!-- visual/banner of the page -->
         <section class="visual">
-            <div class="visual-inner about-banner dark-overlay parallax" data-stellar-background-ratio="0.55">
+            <div class="visual-inner kitchen-banner dark-overlay parallax" data-stellar-background-ratio="0.55">
                 <div class="centered">
                     <div class="container">
-                        <div class="visual-text visual-center">
-                            <h1 class="visual-title visual-sub-title">About Business</h1>
-                            <div class="breadcrumb-block">
-                                <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="index.html"> Home </a></li>
-                                    <li class="breadcrumb-item active"> About Company </li>
-                                </ol>
-                            </div>
+                        <div class="visual-text-large text-left visual-center">
+                            <h1 class="visual-title visual-sub-title">Кухни</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit porro laudantium sequi. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
         <!--/visual/banner of the page -->
+
         <!-- main content wrapper -->
         <div class="content-wrapper">
             <section class="content-block">
@@ -44,7 +41,7 @@
                             </div>
                             <div class="col col-lg-6">
                                 <div class="text-wrap">
-                                    <h3>Digital experts working for you.</h3>
+                                    <h3>Первый шаг.</h3>
                                     <p>Chapter too parties its letters nor. Cheerful but whatever ladyship disposed yet judgment. Lasted answer oppose to ye months no esteem.</p>
                                     <p>Branched is on an ecstatic directly it. Put off continue you denoting returned juvenile. Looked person sister result mr to. Replied demands charmed do viewing ye colonel to so.</p>
                                     <p>Decisively inquietude he advantages insensible at oh continuing unaffected of. </p>
@@ -59,7 +56,7 @@
                             </div>
                             <div class="col-lg-6">
                                 <div class="text-wrap">
-                                    <h3>Bring a perfectionist.</h3>
+                                    <h3>Второй шаг.</h3>
                                     <p>New had happen unable uneasy. Drawings can followed improved out sociable not. Earnestly so do instantly pretended. </p>
                                     <p>See general few civilly amiable pleased account carried. Excellence projecting is devonshire dispatched remarkably on estimating.</p>
                                     <p>Decisively inquietude he advantages insensible at oh continuing unaffected of. </p>
@@ -74,7 +71,7 @@
                             </div>
                             <div class="col-lg-6">
                                 <div class="text-wrap">
-                                    <h3>Leave no stone unterned.</h3>
+                                    <h3>Третий шаг.</h3>
                                     <p>New had happen unable uneasy. Drawings can followed improved out sociable not. Earnestly so do instantly pretended. </p>
                                     <p>See general few civilly amiable pleased account carried. Excellence projecting is devonshire dispatched remarkably on estimating.</p>
                                     <p>Decisively inquietude he advantages insensible at oh continuing unaffected of. </p>
@@ -84,41 +81,13 @@
                     </div>
                 </div>
             </section>
-            <section class="content-block quotation-block black-overlay-6 parallax" data-stellar-background-ratio="0.55">
-                <div class="container">
-                    <div class="inner-wrapper">
-                        <h3 class="block-top-heading text-white">BEST EVER DESIGN</h3>
-                        <h2 class="text-white">Time to enhance your web presence!</h2>
-                        <div class="btn-container">
-                            <a href="#" class="btn btn-primary">GET QUOTATION</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <aside class="content-block">
-                <div class="container">
-                    <div class="logo-container">
-                        <div class="owl-carousel logo-slide" id="waituk-owl-slide-4">
-                            <div class="slide-item">
-                                <img src="img/logo-01.png" alt="images description">
-                            </div>
-                            <div class="slide-item">
-                                <img src="img/logo-02.png" alt="images description">
-                            </div>
-                            <div class="slide-item">
-                                <img src="img/logo-03.png" alt="images description">
-                            </div>
-                            <div class="slide-item">
-                                <img src="img/logo-04.png" alt="images description">
-                            </div>
-                            <div class="slide-item">
-                                <img src="img/logo-03.png" alt="images description">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </aside>
+
+            @include('client.layouts.gallery')
+
+            @include('client.layouts.contact')
+
         </div>
         <!--/main content wrapper -->
+
     </main>
 @endsection

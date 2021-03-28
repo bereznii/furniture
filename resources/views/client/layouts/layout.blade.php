@@ -27,6 +27,7 @@
         <link media="all" rel="stylesheet" href="{{ asset('css/home/main.css') }}">
         <!-- Custom CSS -->
         <link media="all" rel="stylesheet" href="{{ asset('css/home/construction.css') }}">
+        <link media="all" rel="stylesheet" href="{{ asset('css/home/custom.css') }}">
     </head>
     <body>
 

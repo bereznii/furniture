@@ -1,0 +1,15 @@
+.kitchen-banner {
+    background-image: url('/img/kitchen.jpg');
+}
+.hall-banner {
+    background-image: url('/img/hall.jpg');
+}
+.commercial-banner {
+    background-image: url('/img/commercial.jpg');
+}
+.wardrobe-banner {
+    background-image: url('/img/wardrobe.jpg');
+}
+.information-block {
+    background-image: url('/img/cat-back.jpg');
+}
