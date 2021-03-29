@@ -3,7 +3,7 @@
         <div class="container">
             <div class="contact-container">
                 <div class="demo-wrapper content-block text-center py-0">
-                    <h3>Свяжитесь с мной</h3>
+                    <h3>Свяжитесь со мной</h3>
                     <div class="divider-v2"></div>
                 </div>
                 <div class="row">
@@ -13,12 +13,12 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <input type="text" placeholder="Как я могу к Вам обращаться?*" id="con_fname" name="con_fname" class="form-control">
+                                        <input type="text" placeholder="Как я могу к Вам обращаться? *" id="con_fname" name="con_fname" class="form-control">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <input type="tel" placeholder="Номер телефона*" id="con_phone" name="con_phone" class="form-control">
+                                        <input type="tel" placeholder="Номер телефона *" id="con_phone" name="con_phone" class="form-control">
                                     </div>
                                 </div>
                             </div>
@@ -26,7 +26,7 @@
                                 <textarea class="form-control" placeholder="Комментарий" id="con_message" name="con_message"></textarea>
                             </div>
                             <div class="btn-container">
-                                <button id="btn_sent" class="btn btn-primary btn-arrow">Связаться</button>
+                                <button id="btn_sent" class="btn btn-secondary btn-arrow">Связаться</button>
                                 <p id="error_message"> </p>
                             </div>
                         </form>

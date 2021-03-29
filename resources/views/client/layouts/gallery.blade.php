@@ -9,42 +9,80 @@
             <div class="row masonary-block grid">
                 <div class="gallery-item col-md-6 col-lg-3 col-xl-3">
                     <figure class="caption-hover-full">
-                        <div class="image-wrapper"><img src="img/portfolio-21.jpg" alt="images description"></div>
+                        <div class="image-wrapper"><img src="{{ asset('storage/projects/1.jpg') }}" alt="images description"></div>
+                        <div class="overlay-gallery"><a href="{{ route('project') }}">Подробнее</a></div>
                     </figure>
                 </div>
                 <div class="gallery-item col-md-6 col-lg-3 col-xl-3">
                     <figure class="caption-hover-full">
-                        <div class="image-wrapper"><img src="img/portfolio-22.jpg" alt="images description"></div>
+                        <div class="image-wrapper"><img src="{{ asset('storage/projects/2.jpg') }}" alt="images description"></div>
+                        <div class="overlay-gallery"><a href="{{ route('project') }}">Подробнее</a></div>
                     </figure>
                 </div>
                 <div class="gallery-item col-md-6 col-lg-3 col-xl-3">
                     <figure class="caption-hover-full">
-                        <div class="image-wrapper"><img src="img/portfolio-23.jpg" alt="images description"></div>
+                        <div class="image-wrapper"><img src="{{ asset('storage/projects/3.jpg') }}" alt="images description"></div>
+                        <div class="overlay-gallery"><a href="{{ route('project') }}">Подробнее</a></div>
                     </figure>
                 </div>
                 <div class="gallery-item col-md-6 col-lg-3 col-xl-3">
                     <figure class="caption-hover-full">
-                        <div class="image-wrapper"><img src="img/portfolio-24.jpg" alt="images description"></div>
+                        <div class="image-wrapper"><img src="{{ asset('storage/projects/4.jpg') }}" alt="images description"></div>
+                        <div class="overlay-gallery"><a href="{{ route('project') }}">Подробнее</a></div>
                     </figure>
                 </div>
                 <div class="gallery-item col-md-6 col-lg-3 col-xl-3">
                     <figure class="caption-hover-full">
-                        <div class="image-wrapper"><img src="img/portfolio-25.jpg" alt="images description"></div>
+                        <div class="image-wrapper"><img src="{{ asset('storage/projects/5.jpg') }}" alt="images description"></div>
+                        <div class="overlay-gallery"><a href="{{ route('project') }}">Подробнее</a></div>
                     </figure>
                 </div>
                 <div class="gallery-item col-md-6 col-lg-3 col-xl-3">
                     <figure class="caption-hover-full">
-                        <div class="image-wrapper"><img src="img/portfolio-26.jpg" alt="images description"></div>
+                        <div class="image-wrapper"><img src="{{ asset('storage/projects/6.jpg') }}" alt="images description"></div>
+                        <div class="overlay-gallery"><a href="{{ route('project') }}">Подробнее</a></div>
                     </figure>
                 </div>
                 <div class="gallery-item col-md-6 col-lg-3 col-xl-3">
                     <figure class="caption-hover-full">
-                        <div class="image-wrapper"><img src="img/portfolio-27.jpg" alt="images description"></div>
+                        <div class="image-wrapper"><img src="{{ asset('storage/projects/7.jpg') }}" alt="images description"></div>
+                        <div class="overlay-gallery"><a href="{{ route('project') }}">Подробнее</a></div>
                     </figure>
                 </div>
                 <div class="gallery-item col-md-6 col-lg-3 col-xl-3">
                     <figure class="caption-hover-full">
-                        <div class="image-wrapper"><img src="img/portfolio-28.jpg" alt="images description"></div>
+                        <div class="image-wrapper"><img src="{{ asset('storage/projects/8.jpg') }}" alt="images description"></div>
+                        <div class="overlay-gallery"><a href="{{ route('project') }}">Подробнее</a></div>
+                    </figure>
+                </div>
+                <div class="gallery-item col-md-6 col-lg-3 col-xl-3">
+                    <figure class="caption-hover-full">
+                        <div class="image-wrapper"><img src="{{ asset('storage/projects/10.jpg') }}" alt="images description"></div>
+                        <div class="overlay-gallery"><a href="{{ route('project') }}">Подробнее</a></div>
+                    </figure>
+                </div>
+                <div class="gallery-item col-md-6 col-lg-3 col-xl-3">
+                    <figure class="caption-hover-full">
+                        <div class="image-wrapper"><img src="{{ asset('storage/projects/11.jpg') }}" alt="images description"></div>
+                        <div class="overlay-gallery"><a href="{{ route('project') }}">Подробнее</a></div>
+                    </figure>
+                </div>
+                <div class="gallery-item col-md-6 col-lg-3 col-xl-3">
+                    <figure class="caption-hover-full">
+                        <div class="image-wrapper"><img src="{{ asset('storage/projects/12.jpg')  }}" alt="images description"></div>
+                        <div class="overlay-gallery"><a href="{{ route('project') }}">Подробнее</a></div>
+                    </figure>
+                </div>
+                <div class="gallery-item col-md-6 col-lg-3 col-xl-3">
+                    <figure class="caption-hover-full">
+                        <div class="image-wrapper"><img src="{{ asset('storage/projects/13.jpg') }}" alt="images description"></div>
+                        <div class="overlay-gallery"><a href="{{ route('project') }}"><a href="{{ route('project') }}">Подробнее</a></a></div>
+                    </figure>
+                </div>
+                <div class="gallery-item col-md-6 col-lg-3 col-xl-3">
+                    <figure class="caption-hover-full">
+                        <div class="image-wrapper"><img src="{{ asset('storage/projects/14.jpg') }}" alt="images description"></div>
+                        <div class="overlay-gallery"><a href="{{ route('project') }}">Подробнее</a></div>
                     </figure>
                 </div>
             </div>

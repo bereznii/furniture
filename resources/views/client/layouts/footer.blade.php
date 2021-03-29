@@ -2,13 +2,8 @@
     <div class="content-block footer-main">
         <div class="container">
             <div class="row">
-                <div class="col-md-2">
-                    <div class="footer-logo">
-                        <img src="img/logo.svg" alt="image-description">
-                    </div>
-                </div>
                 <div class="col-md-8">
-                    <div class="footer-nav inline-nav text-center">
+                    <div class="footer-nav inline-nav">
                         <ul>
                             <li><a href="#">Кухни</a></li>
                             <li><a href="#">Шкафы / Прихожие</a></li>
@@ -17,10 +12,10 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-md-2 text-right">
+                <div class="col-md-4 text-right">
                     <ul class="social-network with-text">
-                        <li><a href="#"><span class="icon-facebook"></span></a></li>
-                        <li><a href="#"><span class="icon-instagram"></span> </a></li>
+                        <li><a href="https://www.facebook.com/Mebelnyymaster"><span class="icon-facebook"></span></a></li>
+                        <li><a href="https://www.instagram.com/mebelnyymaster"><span class="icon-instagram"></span> </a></li>
                     </ul>
                 </div>
             </div>

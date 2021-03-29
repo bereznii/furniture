@@ -13,3 +13,54 @@
 .information-block {
     background-image: url('/img/cat-back.jpg');
 }
+section.information-block img {
+    max-width: 40%;
+}
+section.information-block a.info-block {
+    padding-top: 7rem !important;
+    padding-bottom: 7rem !important;
+}
+
+/* Header */
+.nav.navbar-nav .btn {
+    min-width: 11rem;
+}
+a.header-logo {
+    color: white;
+    font-size: 1.6em !important;
+}
+
+/* Footer */
+.footer-logo {
+    color: white;
+    font-size: 1.6em !important;
+}
+
+/* Gallery Overlay */
+figure.caption-hover-full {
+    position: relative;
+}
+.overlay-gallery {
+    position: absolute;
+    bottom: 0;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5); /* Black see-through */
+    width: 100%;
+    color: white;
+    font-size: 1.2rem;
+    padding: 0.2rem;
+    text-align: center;
+    opacity: 0;
+    transition: .5s ease;
+}
+figure.caption-hover-full .overlay-gallery a {
+    color: white !important;
+}
+figure.caption-hover-full:hover .overlay-gallery {
+    opacity: 1;
+}
+@media only screen and (max-width: 991px) {
+    .overlay-gallery {
+        opacity: 1;
+    }
+}

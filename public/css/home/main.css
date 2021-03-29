@@ -140,7 +140,7 @@ Version: 		1.0.0
  *
  * bootstrap-slider is released under the MIT License
  * Copyright (c) 2017 Kyle Kemp, Rohit Kalkur, and contributors
- * 
+ *
  * Permission is hereby granted, free of charge, to any person
  * obtaining a copy of this software and associated documentation
  * files (the "Software"), to deal in the Software without
@@ -149,10 +149,10 @@ Version: 		1.0.0
  * copies of the Software, and to permit persons to whom the
  * Software is furnished to do so, subject to the following
  * conditions:
- * 
+ *
  * The above copyright notice and this permission notice shall be
  * included in all copies or substantial portions of the Software.
- * 
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
  * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
  * OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
@@ -6217,20 +6217,20 @@ pre {
 	transition-delay: .4s;
 }
 
-.grayscale-effect img,.logo-container .owl-carousel .owl-item img {
-	-webkit-filter: grayscale(100%);
-	filter: grayscale(100%);
-	-webkit-transition: -webkit-filter linear .3s;
-	transition: -webkit-filter linear .3s;
-	-o-transition: filter linear .3s;
-	transition: filter linear .3s;
-	transition: filter linear .3s, -webkit-filter linear .3s;
-}
+/*.grayscale-effect img,.logo-container .owl-carousel .owl-item img {*/
+/*	-webkit-filter: grayscale(100%);*/
+/*	filter: grayscale(100%);*/
+/*	-webkit-transition: -webkit-filter linear .3s;*/
+/*	transition: -webkit-filter linear .3s;*/
+/*	-o-transition: filter linear .3s;*/
+/*	transition: filter linear .3s;*/
+/*	transition: filter linear .3s, -webkit-filter linear .3s;*/
+/*}*/
 
-.grayscale-effect:hover img,.logo-container .owl-carousel .owl-item:hover img {
-	-webkit-filter: grayscale(0);
-	filter: grayscale(0);
-}
+/*.grayscale-effect:hover img,.logo-container .owl-carousel .owl-item:hover img {*/
+/*	-webkit-filter: grayscale(0);*/
+/*	filter: grayscale(0);*/
+/*}*/
 
 .reverse-grayscale-effect img {
 	-webkit-filter: grayscale(0);

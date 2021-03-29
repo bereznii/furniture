@@ -169,28 +169,28 @@
                     <div class="row">
                         <a href="{{ route('kitchen') }}" class="info-block info-block-v2 block-1 text-center col-sm-6 col-lg-3">
                             <div class="icon">
-                                <img src="img/icons/icon-planning.png" alt="planning">
+                                <img src="{{ asset('img/icons/kitchen.png') }}" alt="Kitchen Logo">
                             </div>
                             <h3 class="block-title">Кухни</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore </p>
                         </a>
                         <a href="{{ route('hall') }}" class="info-block info-block-v2 block-2 text-center col-sm-6 col-lg-3">
                             <div class="icon">
-                                <img src="img/icons/icon-design.png" alt="design">
+                                <img src="{{ asset('img/icons/hall.png') }}" alt="Hall Logo">
                             </div>
                             <h3 class="block-title">Шкафы и прихожие</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore </p>
                         </a>
                         <a href="{{ route('commercial') }}" class="info-block info-block-v2 block-3 text-center col-sm-6 col-lg-3">
                             <div class="icon">
-                                <img src="img/icons/icon-service.png" alt="design">
+                                <img src="{{ asset('img/icons/commercial.png') }}" alt="Commercial Logo">
                             </div>
                             <h3 class="block-title">Офисная и торговая мебель</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore </p>
                         </a>
                         <a href="{{ route('wardrobe') }}" class="info-block info-block-v2 block-4 text-center col-sm-6 col-lg-3">
                             <div class="icon">
-                                <img src="img/icons/icon-support.png" alt="design">
+                                <img src="{{ asset('img/icons/wardrobe.png') }}" alt="Wardrobe Logo">
                             </div>
                             <h3 class="block-title">Гардеробы</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore </p>
@@ -199,11 +199,11 @@
                 </div>
             </section>
 
-            <section class="content-block">
+            <section class="content-block" id="contact-form">
                 <div class="container">
                         <div class="contact-container">
                             <div class="demo-wrapper content-block text-center py-0">
-                                <h3>Свяжитесь с мной</h3>
+                                <h3>Свяжитесь со мной</h3>
                                 <div class="divider-v2"></div>
                             </div>
                             <div class="row">
@@ -213,12 +213,12 @@
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <input type="text" placeholder="Как я могу к Вам обращаться?*" id="con_fname" name="con_fname" class="form-control">
+                                                    <input type="text" placeholder="Как я могу к Вам обращаться? *" id="con_fname" name="con_fname" class="form-control">
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <input type="tel" placeholder="Номер телефона*" id="con_phone" name="con_phone" class="form-control">
+                                                    <input type="tel" placeholder="Номер телефона *" id="con_phone" name="con_phone" class="form-control">
                                                 </div>
                                             </div>
                                         </div>
@@ -226,7 +226,7 @@
                                             <textarea class="form-control" placeholder="Комментарий" id="con_message" name="con_message"></textarea>
                                         </div>
                                         <div class="btn-container">
-                                            <button id="btn_sent" class="btn btn-primary btn-arrow">Связаться</button>
+                                            <button id="btn_sent" class="btn btn-secondary btn-arrow">Связаться</button>
                                             <p id="error_message"> </p>
                                         </div>
                                     </form>
@@ -262,25 +262,36 @@
             <div class="map-holder embed-responsive-21by9">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d325518.68780316407!2d30.252511957059642!3d50.4016990487754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cf4ee15a4505%3A0x764931d2170146fe!2z0JrQuNC10LIsIDAyMDAw!5e0!3m2!1sru!2sua!4v1616951269047!5m2!1sru!2sua" height="450" style="border:0;" loading="lazy"></iframe>
             </div>
-
             <aside class="content-block">
                 <div class="container">
                     <div class="logo-container">
                         <div class="owl-carousel logo-slide" id="waituk-owl-slide-4">
                             <div class="slide-item">
-                                <img src="img/logo-01.png" alt="images description">
+                                <img src="{{ asset('img/partners/blum.png') }}" alt="Blum Logo">
                             </div>
                             <div class="slide-item">
-                                <img src="img/logo-02.png" alt="images description">
+                                <img src="{{ asset('img/partners/rehau.png') }}" alt="Rehau Logo">
                             </div>
                             <div class="slide-item">
-                                <img src="img/logo-03.png" alt="images description">
+                                <img src="{{ asset('img/partners/muller.png') }}" alt="Muller Logo">
                             </div>
                             <div class="slide-item">
-                                <img src="img/logo-04.png" alt="images description">
+                                <img src="{{ asset('img/partners/cleaf.jpg') }}" alt="Cleaf Logo">
                             </div>
                             <div class="slide-item">
-                                <img src="img/logo-03.png" alt="images description">
+                                <img src="{{ asset('img/partners/egger.png') }}" alt="Egger Logo">
+                            </div>
+                            <div class="slide-item">
+                                <img src="{{ asset('img/partners/swiss.jpg') }}" alt="Swiss Logo">
+                            </div>
+                            <div class="slide-item">
+                                <img src="{{ asset('img/partners/hettich.jpg') }}" alt="Hettich Logo">
+                            </div>
+                            <div class="slide-item">
+                                <img src="{{ asset('img/partners/kronospan.png') }}" alt="Kronospan Logo">
+                            </div>
+                            <div class="slide-item">
+                                <img src="{{ asset('img/partners/luxeform.png') }}" alt="Luxeform Logo">
                             </div>
                         </div>
                     </div>

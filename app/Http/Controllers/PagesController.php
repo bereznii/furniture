@@ -52,4 +52,12 @@ class PagesController extends Controller
     {
         return view('client/pages/wardrobe');
     }
+
+    /**
+     * @return Application|Factory|View
+     */
+    public function projectPage()
+    {
+        return view('client/pages/project');
+    }
 }
