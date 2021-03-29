@@ -56,7 +56,7 @@
                         <li>
                             <a href="{{ route('wardrobe') }}" data-title="Гардеробы"> Гардеробы </a>
                         </li>
-                        <li class="d-flex align-items-center">
+                        <li class="d-flex align-items-center justify-content-center">
                             <a href="{{ route('landing') }}#contact-form" data-title="Гардеробы" class="btn btn-tertiary btn-small-font btn-secondary has-radius-huge"> Связаться </a>
                         </li>
                     </ul>

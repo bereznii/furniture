@@ -82,7 +82,11 @@
 
             @include('client.layouts.gallery')
 
-            @include('client.layouts.contact')
+            <div class="content-wrapper">
+                <section class="content-block quotation-block commercial-bottom-block black-overlay-6 parallax" data-stellar-background-ratio="0.55">
+                    @include('client.layouts.cta')
+                </section>
+            </div>
 
         </div>
         <!--/main content wrapper -->

@@ -1,14 +1,26 @@
 .kitchen-banner {
     background-image: url('/img/kitchen.jpg');
 }
+.kitchen-bottom-block {
+    background-image: url('/img/kitchen2.jpg');
+}
 .hall-banner {
     background-image: url('/img/hall.jpg');
+}
+.hall-bottom-block {
+    background-image: url('/img/hall2.jpg');
 }
 .commercial-banner {
     background-image: url('/img/commercial.jpg');
 }
+.commercial-bottom-block {
+    background-image: url('/img/commercial2.jpg');
+}
 .wardrobe-banner {
     background-image: url('/img/wardrobe.jpg');
+}
+.wardrobe-bottom-block {
+    background-image: url('/img/wardrobe2.jpg');
 }
 .information-block {
     background-image: url('/img/cat-back.jpg');
@@ -28,6 +40,11 @@ section.information-block a.info-block {
 a.header-logo {
     color: white;
     font-size: 1.6em !important;
+}
+@media only screen and (max-width: 991px) {
+    .nav.navbar-nav a.btn {
+        margin: 1.5rem 0;
+    }
 }
 
 /* Footer */

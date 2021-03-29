@@ -23,8 +23,6 @@
         <link rel="stylesheet" type="text/css" href="{{ asset('vendors/rev-slider/revolution/css/settings.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ asset('vendors/rev-slider/revolution/css/layers.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ asset('vendors/rev-slider/revolution/css/navigation.css') }}">
-        <!-- Theme CSS -->
-{{--        <link media="all" rel="stylesheet" href="{{ asset('css/home/main.css') }}">--}}
         <!-- Custom CSS -->
         <link media="all" rel="stylesheet" href="{{ asset('css/home/construction.css') }}">
         <link media="all" rel="stylesheet" href="{{ asset('css/home/custom.css') }}">

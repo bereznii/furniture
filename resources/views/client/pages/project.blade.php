@@ -33,6 +33,11 @@
                             <div class="img-block">
                                 <img src="{{ asset('storage/projects/14.jpg') }}" alt="images">
                             </div>
+                            <div class="portfolio-des py-4">
+                                <h2 class="text-block-title">Описание проекта:</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+                            </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="row">
@@ -56,34 +61,21 @@
                                         <img src="{{ asset('storage/projects/1-4.jpg') }}" alt="images">
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-12">
-                            <div class="row">
-                                <div class="col-small col-md-3">
+                                <div class="col-small col-md-6">
                                     <div class="img-block">
                                         <img src="{{ asset('storage/projects/1-5.jpg') }}" alt="images">
                                     </div>
                                 </div>
-                                <div class="col-small col-md-3">
+                                <div class="col-small col-md-6">
                                     <div class="img-block">
                                         <img src="{{ asset('storage/projects/1-6.jpg') }}" alt="images">
                                     </div>
                                 </div>
-                                <div class="col-small col-md-3">
+                                <div class="col-small col-md-6">
                                     <div class="img-block">
                                         <img src="{{ asset('storage/projects/1-7.jpg') }}" alt="images">
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="portfolio-des">
-                        <div class="row">
-                            <div class="col-lg-12 bottom-space-medium-only">
-                                <h2 class="text-block-title">Описание проекта:</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
                             </div>
                         </div>
                     </div>
