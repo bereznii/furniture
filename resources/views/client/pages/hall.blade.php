@@ -40,7 +40,7 @@
                             </div>
                             <div class="col col-lg-6">
                                 <div class="text-wrap">
-                                    <h3>Digital experts working for you.</h3>
+                                    <h3>Первый шаг.</h3>
                                     <p>Chapter too parties its letters nor. Cheerful but whatever ladyship disposed yet judgment. Lasted answer oppose to ye months no esteem.</p>
                                     <p>Branched is on an ecstatic directly it. Put off continue you denoting returned juvenile. Looked person sister result mr to. Replied demands charmed do viewing ye colonel to so.</p>
                                     <p>Decisively inquietude he advantages insensible at oh continuing unaffected of. </p>
@@ -55,7 +55,7 @@
                             </div>
                             <div class="col-lg-6">
                                 <div class="text-wrap">
-                                    <h3>Bring a perfectionist.</h3>
+                                    <h3>Второй шаг.</h3>
                                     <p>New had happen unable uneasy. Drawings can followed improved out sociable not. Earnestly so do instantly pretended. </p>
                                     <p>See general few civilly amiable pleased account carried. Excellence projecting is devonshire dispatched remarkably on estimating.</p>
                                     <p>Decisively inquietude he advantages insensible at oh continuing unaffected of. </p>
@@ -70,7 +70,7 @@
                             </div>
                             <div class="col-lg-6">
                                 <div class="text-wrap">
-                                    <h3>Leave no stone unterned.</h3>
+                                    <h3>Третий шаг.</h3>
                                     <p>New had happen unable uneasy. Drawings can followed improved out sociable not. Earnestly so do instantly pretended. </p>
                                     <p>See general few civilly amiable pleased account carried. Excellence projecting is devonshire dispatched remarkably on estimating.</p>
                                     <p>Decisively inquietude he advantages insensible at oh continuing unaffected of. </p>
