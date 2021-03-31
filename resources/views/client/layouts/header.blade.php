@@ -57,7 +57,17 @@
                             <a href="{{ route('wardrobe') }}" data-title="Гардеробы"> Гардеробы </a>
                         </li>
                         <li class="d-flex align-items-center justify-content-center">
-                            <a href="{{ route('landing') }}#contact-form" data-title="Гардеробы" class="btn btn-tertiary btn-small-font btn-secondary has-radius-huge"> Связаться </a>
+                            <a href="{{ route('landing') }}#contact-form" data-title="Гардеробы" class="btn btn-tertiary btn-small-font btn-secondary has-radius-huge"> Перезвонить </a>
+                        </li>
+                        <li class="d-flex align-items-center justify-content-center mobile-phone">
+                            <a href="tel:+380638443748" class="nav-link"><span class="custom-icon-phone-ring"></span> +38 (063) 844 37 48</a>
+                        </li>
+                        <li class="d-flex align-items-center justify-content-center mobile-phone">
+                            <a href="tel:+380986035327" class="nav-link"><span class="custom-icon-phone-ring"></span> +38 (098) 603 53 27</a>
+                        </li>
+                        <li class="d-flex align-items-center justify-content-around mobile-phone-icons">
+                            <a href="https://www.facebook.com/Mebelnyymaster"><span class="icon-facebook"></span></a>
+                            <a href="https://www.instagram.com/mebelnyymaster"><span class="icon-instagram"></span></a>
                         </li>
                     </ul>
                 </div>

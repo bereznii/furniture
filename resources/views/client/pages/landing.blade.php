@@ -242,15 +242,8 @@
                                         <div class="icon"><span class="custom-icon-headset"></span></div>
                                         <div class="text">
                                             <ul class="content-list contact-list">
-                                                <li><a href="tel:02078777777">(020) 7877 7777</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="info-slot">
-                                        <div class="icon"><span class="custom-icon-message"></span></div>
-                                        <div class="text">
-                                            <ul class="content-list contact-list">
-                                                <li><a href="mailto:help@roxine-online.com">help@roxine-online.com</a></li>
+                                                <li><a href="tel:+380638443748"> +38 (063) 844 37 48</a></li>
+                                                <li><a href="tel:+380986035327"> +38 (098) 603 53 27</a></li>
                                             </ul>
                                         </div>
                                     </div>
