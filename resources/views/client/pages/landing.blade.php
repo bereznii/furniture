@@ -226,7 +226,7 @@
                                             <textarea class="form-control" placeholder="Комментарий" id="con_message" name="con_message"></textarea>
                                         </div>
                                         <div class="btn-container">
-                                            <button id="btn_sent" class="btn btn-secondary btn-arrow">Связаться</button>
+                                            <button id="btn_sent" class="btn btn-secondary btn-arrow" disabled>Оставить заявку</button>
                                             <p id="error_message"> </p>
                                         </div>
                                     </form>

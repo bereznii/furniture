@@ -6,6 +6,10 @@
  *******************************/
 
 $(document).ready(function() {
+    $('.navbar-nav > li > a.btn').on('click', function(){
+        $('.navbar-collapse').collapse('hide');
+    })
+
     // main elements
     var $body = $('body');
     var $win = $(window);
