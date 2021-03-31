@@ -3176,7 +3176,7 @@ em.state-invalid {
         display: block;
         padding: 0.4rem 0.9375rem; }
       .main-header .navbar .navbar-nav li a {
-        padding: 1.2rem 0.9375rem;
+        padding: 0.9rem 0.9375rem;
         line-height: 2.1;
         display: block; }
         .main-header .navbar .navbar-nav li a:hover {
@@ -3324,7 +3324,7 @@ em.state-invalid {
       visibility: hidden; }
     @media only screen and (max-width: 991px) {
       .main-header.sticky-nav .navbar .navbar-nav li a {
-        padding: 1.2rem 0.9375rem; }
+        padding: 0.9rem 0.9375rem; }
       .main-header.sticky-nav .navbar .navbar-nav .dropdown-menu li {
         padding: 0; }
         .main-header.sticky-nav .navbar .navbar-nav .dropdown-menu li a {
