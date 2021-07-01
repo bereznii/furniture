@@ -10,7 +10,9 @@
                     <div class="container">
                         <div class="visual-text-large text-left visual-center">
                             <h1 class="visual-title visual-sub-title">Кухни</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit porro laudantium sequi. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                            <p>
+                                Ароматное, приятное и уютное место, любимый кофе, сладкие блинчики. Теплый долгожданный ужин. Любимое место, где собирается вся семья. Приятные события, разговоры. И, просто, тишина. Все это ждет Вас на любимой кухне.
+                            </p>
                         </div>
                     </div>
                 </div>

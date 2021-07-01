@@ -9,7 +9,9 @@
                     <div class="container">
                         <div class="visual-text-large text-right visual-center">
                             <h1 class="visual-title visual-sub-title">Гардеробы</h1>
-                            <p class="float-right">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit porro laudantium sequi. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                            <p class="float-right">
+                                Здесь поместится все, ну почти все что Вам хотелось. Мы об этом позаботимся. «Все до мелочей, все так как я хочу». И все так и будет!
+                            </p>
                         </div>
                     </div>
                 </div>

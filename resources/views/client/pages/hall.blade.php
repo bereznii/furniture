@@ -9,7 +9,10 @@
                     <div class="container">
                         <div class="visual-text-large text-right visual-center">
                             <h1 class="visual-title visual-sub-title">Шкафы и прихожие</h1>
-                            <p class="float-right">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit porro laudantium sequi. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                            <p class="float-right">
+                                Что может радовать как порядок в доме. Шкафы – это то, что делает наш дом в полном порядке. Заказав шкаф на свой вкус и комфорт, вы будете радоваться, как все компактно и продумано.
+                                Прихожая нас каждый день провожает улыбкой в зеркале и встречает вечером с теплом и запахом любимого дома.
+                            </p>
                         </div>
                     </div>
                 </div>

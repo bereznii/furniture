@@ -9,7 +9,9 @@
                     <div class="container">
                         <div class="visual-text-large text-left visual-center">
                             <h1 class="visual-title visual-sub-title">Офисная и торговая мебель</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit porro laudantium sequi. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                            <p>
+                                Стильный современный офис с комфортном всегда украшает качественно продуманная мебель. В торговых точках важно на каких полках лежит товар, в каком стиле все продуманно, что клиенту было удобно выбрать и остаться довольным.
+                            </p>
                         </div>
                     </div>
                 </div>
