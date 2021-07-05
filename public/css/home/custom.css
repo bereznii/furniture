@@ -39,10 +39,15 @@ section.information-block img {
     opacity: .6;
 }
 .information-block .info-block:hover:before {
-    opacity: 0.1; }
+    opacity: 0.1;
+}
 section.information-block a.info-block {
     padding-top: 7rem !important;
     padding-bottom: 7rem !important;
+}
+
+section.steps-block {
+    font-size: 1.1rem;
 }
 
 /* Header */

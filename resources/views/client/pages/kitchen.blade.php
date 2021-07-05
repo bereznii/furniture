@@ -31,13 +31,13 @@
                     </div>
                 </div>
             </section>
-            <section class="content-block p-0">
+            <section class="content-block p-0 steps-block">
                 <div class="container-fluid">
                     <div class="content-slot alternate-block">
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="bg-stretch img-wrap wow slideInLeft">
-                                    <img src="img/img-09.jpg" alt="images">
+                                    <img src="{{ asset('img/steps/step1-kitchen.jpg') }}" alt="images">
                                 </div>
                             </div>
                             <div class="col col-lg-6">
@@ -63,7 +63,7 @@
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="bg-stretch img-wrap wow slideInRight">
-                                    <img src="img/img-10.jpg" alt="images">
+                                    <img src="{{ asset('img/steps/step2-kitchen.jpg') }}" alt="images">
                                 </div>
                             </div>
                             <div class="col-lg-6">
@@ -92,7 +92,7 @@
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="bg-stretch img-wrap wow slideInLeft">
-                                    <img src="img/img-11.jpg" alt="images">
+                                    <img src="{{ asset('img/steps/step3-kitchen.jpg') }}" alt="images">
                                 </div>
                             </div>
                             <div class="col-lg-6">
