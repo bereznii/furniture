@@ -56,6 +56,14 @@ class PagesController extends Controller
     /**
      * @return Application|Factory|View
      */
+    public function childrenPage()
+    {
+        return view('client/pages/children');
+    }
+
+    /**
+     * @return Application|Factory|View
+     */
     public function projectPage()
     {
         return view('client/pages/project');

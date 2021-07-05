@@ -19,5 +19,6 @@ Route::get('/kitchen', [PagesController::class, 'kitchenPage'])->name('kitchen')
 Route::get('/hall', [PagesController::class, 'hallPage'])->name('hall');
 Route::get('/commercial', [PagesController::class, 'commercialPage'])->name('commercial');
 Route::get('/wardrobe', [PagesController::class, 'wardrobePage'])->name('wardrobe');
+Route::get('/children', [PagesController::class, 'childrenPage'])->name('children');
 
 Route::get('/project', [PagesController::class, 'projectPage'])->name('project');

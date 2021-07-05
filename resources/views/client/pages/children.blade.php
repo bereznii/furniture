@@ -2,13 +2,14 @@
 
 @section('client.pages.content')
     <main>
+
         <!-- visual/banner of the page -->
         <section class="visual">
-            <div class="visual-inner hall-banner dark-overlay parallax" data-stellar-background-ratio="0.55">
+            <div class="visual-inner children-banner dark-overlay parallax" data-stellar-background-ratio="0.55">
                 <div class="centered">
                     <div class="container">
-                        <div class="visual-text-large text-right visual-center">
-                            <h1 class="visual-title visual-sub-title">Шкафы и прихожие</h1>
+                        <div class="visual-text-large text-left visual-center">
+                            <h1 class="visual-title visual-sub-title">Детская мебель</h1>
                         </div>
                     </div>
                 </div>
@@ -25,8 +26,7 @@
                     </div>
                     <div class="description">
                         <p>
-                            Что может радовать как порядок в доме. Шкафы – это то, что делает наш дом в полном порядке. Заказав шкаф на свой вкус и комфорт, вы будете радоваться, как все компактно и продумано.
-                            Прихожая нас каждый день провожает улыбкой в зеркале и встречает вечером с теплом и запахом любимого дома.
+                            Нужен текст
                         </p>
                     </div>
                 </div>
@@ -113,7 +113,7 @@
             @include('client.layouts.gallery')
 
             <div class="content-wrapper">
-                <section class="content-block quotation-block hall-bottom-block black-overlay-6 parallax" data-stellar-background-ratio="0.55">
+                <section class="content-block quotation-block children-bottom-block black-overlay-6 parallax" data-stellar-background-ratio="0.55">
                     @include('client.layouts.cta')
                 </section>
             </div>

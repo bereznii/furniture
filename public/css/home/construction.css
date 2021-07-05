@@ -4490,13 +4490,13 @@ em.state-invalid {
     opacity: 0.9; }
   .information-block .info-block.block-2:before {
     background: #55565b;
-    opacity: 0.84; }
+    opacity: 0.6; }
   .information-block .info-block.block-3:before {
     background: #f57f17;
     opacity: 0.5; }
   .information-block .info-block.block-4:before {
     background: #ff5722;
-    opacity: 0.84; }
+    opacity: 0.7; }
   .information-block .info-block:hover:before {
     opacity: 0.1; }
   .information-block .info-block.info-block-v2 {

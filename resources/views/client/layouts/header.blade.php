@@ -36,7 +36,7 @@
                 </div>
             </nav>
         </div>
-        <div class="bottom-header container mega-menus" id="mega-menus">
+        <div class="bottom-header container-fluid mega-menus" id="mega-menus">
             <nav class="navbar navbar-toggleable-md no-border-radius no-margin mega-menu-multiple" id="navbar-inner-container">
                 <button type="button" class="navbar-toggler navbar-toggler-left" data-toggle="collapse" data-target="#mega-menu">
                     <span class="navbar-toggler-icon"></span>
@@ -56,8 +56,11 @@
                         <li>
                             <a href="{{ route('wardrobe') }}" data-title="Гардеробы"> Гардеробы </a>
                         </li>
+                        <li>
+                            <a href="{{ route('children') }}" data-title="Гардеробы"> Детская мебель </a>
+                        </li>
                         <li class="d-flex align-items-center justify-content-center">
-                            <a href="{{ route('landing') }}#contact-form" data-title="Гардеробы" class="btn btn-tertiary btn-small-font btn-secondary has-radius-huge"> Перезвонить </a>
+                            <a href="{{ route('landing') }}#contact-form" data-title="Контакты" class="btn btn-tertiary btn-small-font btn-secondary has-radius-huge"> Перезвонить </a>
                         </li>
                         <li class="d-flex align-items-center justify-content-center mobile-phone">
                             <a href="tel:+380638443748" class="nav-link"><span class="custom-icon-phone-ring"></span> +38 (063) 844 37 48</a>

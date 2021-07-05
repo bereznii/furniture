@@ -22,12 +22,24 @@
 .wardrobe-bottom-block {
     background-image: url('/img/wardrobe2.jpg');
 }
+.children-banner {
+    background-image: url('/img/children.jpg');
+}
+.children-bottom-block {
+    background-image: url('/img/children2.jpg');
+}
 .information-block {
     background-image: url('/img/cat-back.jpg');
 }
 section.information-block img {
-    max-width: 40%;
+    max-width: 10em;
 }
+.information-block .info-block.block-5:before {
+    background: #FFB273;
+    opacity: .6;
+}
+.information-block .info-block:hover:before {
+    opacity: 0.1; }
 section.information-block a.info-block {
     padding-top: 7rem !important;
     padding-bottom: 7rem !important;

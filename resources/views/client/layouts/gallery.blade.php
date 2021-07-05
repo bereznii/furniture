@@ -1,10 +1,9 @@
 <div class="content-wrapper">
     <section class="content-block portfolio-block eighty-percent">
         <div class="container-fluid">
-            <div class="demo-wrapper content-block text-center pt-0 pb-5">
+            <div class="demo-wrapper content-block text-center pt-0 pb-2">
                 <h2>Мои работы</h2>
-                <div class="divider-v2"></div>
-                <span class="block-sub-heading">Block Sub Heading.</span>
+                <div class="dotted-border"></div>
             </div>
             <div class="row masonary-block grid">
                 <div class="gallery-item col-md-6 col-lg-3 col-xl-3">

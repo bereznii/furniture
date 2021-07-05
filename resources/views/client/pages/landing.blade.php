@@ -172,28 +172,30 @@
                                 <img src="{{ asset('img/icons/kitchen.png') }}" alt="Kitchen Logo">
                             </div>
                             <h3 class="block-title">Кухни</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore </p>
                         </a>
-                        <a href="{{ route('hall') }}" class="info-block info-block-v2 block-2 text-center col-sm-6 col-lg-3">
+                        <a href="{{ route('hall') }}" class="info-block info-block-v2 block-2 text-center col-sm-6 col-lg-2">
                             <div class="icon">
                                 <img src="{{ asset('img/icons/hall.png') }}" alt="Hall Logo">
                             </div>
                             <h3 class="block-title">Шкафы и прихожие</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore </p>
                         </a>
-                        <a href="{{ route('commercial') }}" class="info-block info-block-v2 block-3 text-center col-sm-6 col-lg-3">
+                        <a href="{{ route('commercial') }}" class="info-block info-block-v2 block-3 text-center col-sm-4 col-lg-2">
                             <div class="icon">
                                 <img src="{{ asset('img/icons/commercial.png') }}" alt="Commercial Logo">
                             </div>
                             <h3 class="block-title">Офисная и торговая мебель</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore </p>
                         </a>
-                        <a href="{{ route('wardrobe') }}" class="info-block info-block-v2 block-4 text-center col-sm-6 col-lg-3">
+                        <a href="{{ route('wardrobe') }}" class="info-block info-block-v2 block-5 text-center col-sm-4 col-lg-2">
                             <div class="icon">
                                 <img src="{{ asset('img/icons/wardrobe.png') }}" alt="Wardrobe Logo">
                             </div>
                             <h3 class="block-title">Гардеробы</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore </p>
+                        </a>
+                        <a href="{{ route('children') }}" class="info-block info-block-v2 block-4 text-center col-sm-4 col-lg-3">
+                            <div class="icon">
+                                <img src="{{ asset('img/icons/children.png') }}" alt="Children Logo">
+                            </div>
+                            <h3 class="block-title">Детская мебель</h3>
                         </a>
                     </div>
                 </div>

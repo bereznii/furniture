@@ -10,9 +10,6 @@
                     <div class="container">
                         <div class="visual-text-large text-left visual-center">
                             <h1 class="visual-title visual-sub-title">Кухни</h1>
-                            <p>
-                                Ароматное, приятное и уютное место, любимый кофе, сладкие блинчики. Теплый долгожданный ужин. Любимое место, где собирается вся семья. Приятные события, разговоры. И, просто, тишина. Все это ждет Вас на любимой кухне.
-                            </p>
                         </div>
                     </div>
                 </div>
@@ -25,10 +22,12 @@
             <section class="content-block">
                 <div class="container text-center">
                     <div class="heading bottom-space">
-                        <h2>Dream. <span>Create.</span> Deliver</h2>
+                        <h2>Индивидуальность. <span>Сервис.</span> Качество.</h2>
                     </div>
                     <div class="description">
-                        <p>Delightful unreserved impossible few estimating men favourable see entreaties. She propriety immediate was improving. He or entrance humoured likewise moderate. Much nor game son say feel. Fat make met can must form into gate. Me we offending prevailed discovery. </p>
+                        <p>
+                            Ароматное, приятное и уютное место, любимый кофе, сладкие блинчики. Теплый долгожданный ужин. Любимое место, где собирается вся семья. Приятные события, разговоры. И, просто, тишина. Все это ждет Вас на любимой кухне.
+                        </p>
                     </div>
                 </div>
             </section>
@@ -44,9 +43,20 @@
                             <div class="col col-lg-6">
                                 <div class="text-wrap">
                                     <h3>Первый шаг.</h3>
-                                    <p>Chapter too parties its letters nor. Cheerful but whatever ladyship disposed yet judgment. Lasted answer oppose to ye months no esteem.</p>
-                                    <p>Branched is on an ecstatic directly it. Put off continue you denoting returned juvenile. Looked person sister result mr to. Replied demands charmed do viewing ye colonel to so.</p>
-                                    <p>Decisively inquietude he advantages insensible at oh continuing unaffected of. </p>
+                                    <ul>
+                                        <li>
+                                            Замер
+                                        </li>
+                                        <li>
+                                            Консультация и выбор фасадов и корпуса
+                                        </li>
+                                        <li>
+                                            Выбор столешницы
+                                        </li>
+                                        <li>
+                                            Рекомендации по фурнитуре
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -59,9 +69,23 @@
                             <div class="col-lg-6">
                                 <div class="text-wrap">
                                     <h3>Второй шаг.</h3>
-                                    <p>New had happen unable uneasy. Drawings can followed improved out sociable not. Earnestly so do instantly pretended. </p>
-                                    <p>See general few civilly amiable pleased account carried. Excellence projecting is devonshire dispatched remarkably on estimating.</p>
-                                    <p>Decisively inquietude he advantages insensible at oh continuing unaffected of. </p>
+                                    <ul>
+                                        <li>
+                                            Расчет стоимости
+                                        </li>
+                                        <li>
+                                            Разработка проекта
+                                        </li>
+                                        <li>
+                                            3D визуализации
+                                        </li>
+                                        <li>
+                                            Согласование всех деталей
+                                        </li>
+                                        <li>
+                                            Подписание договора
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -74,9 +98,17 @@
                             <div class="col-lg-6">
                                 <div class="text-wrap">
                                     <h3>Третий шаг.</h3>
-                                    <p>New had happen unable uneasy. Drawings can followed improved out sociable not. Earnestly so do instantly pretended. </p>
-                                    <p>See general few civilly amiable pleased account carried. Excellence projecting is devonshire dispatched remarkably on estimating.</p>
-                                    <p>Decisively inquietude he advantages insensible at oh continuing unaffected of. </p>
+                                    <ul>
+                                        <li>
+                                            Доставка
+                                        </li>
+                                        <li>
+                                            Сборка
+                                        </li>
+                                        <li>
+                                            Установка бытовой техники
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
