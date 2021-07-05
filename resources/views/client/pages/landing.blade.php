@@ -52,7 +52,7 @@
                                         </div>
                                         <div class="icon-desc">
                                             <div class="des">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
+                                                <p>Встреча с клиентом на объекте<br>Обсуждение всех деталей и пожеланий</p>
                                             </div>
                                         </div>
                                     </div>
@@ -69,7 +69,7 @@
                                         </div>
                                         <div class="icon-desc">
                                             <div class="des">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
+                                                <p>Консультация с учетом пожеланий и бюджета клиента</p>
                                             </div>
                                         </div>
                                     </div>
@@ -103,7 +103,7 @@
                                         </div>
                                         <div class="icon-desc">
                                             <div class="des">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
+                                                <p>Предварительная сумма за мебель с учетом выбранного материала, предварительного проекта</p>
                                             </div>
                                         </div>
                                     </div>
@@ -120,7 +120,7 @@
                                         </div>
                                         <div class="icon-desc">
                                             <div class="des">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
+                                                <p>Проект мебели с учетом всех деталей и пожеланий клиента</p>
                                             </div>
                                         </div>
                                     </div>
@@ -137,7 +137,7 @@
                                         </div>
                                         <div class="icon-desc">
                                             <div class="des">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
+                                                <p>Предварительная упаковка<br>Занос на объект</p>
                                             </div>
                                         </div>
                                     </div>
@@ -154,7 +154,7 @@
                                         </div>
                                         <div class="icon-desc">
                                             <div class="des">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
+                                                <p>Качественная установка мебели</p>
                                             </div>
                                         </div>
                                     </div>
