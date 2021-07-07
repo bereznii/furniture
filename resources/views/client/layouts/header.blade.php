@@ -54,10 +54,10 @@
                             <a href="{{ route('commercial') }}" data-title="Офисная/Торговая мебель"> Офисная / Торговая мебель </a>
                         </li>
                         <li>
-                            <a href="{{ route('wardrobe') }}" data-title="Гардеробы"> Гардеробы </a>
+                            <a href="{{ route('wardrobe') }}" data-title="Гардеробы/Навесные тумбы"> Гардеробы / Навесные тумбы </a>
                         </li>
                         <li>
-                            <a href="{{ route('children') }}" data-title="Гардеробы"> Детская мебель </a>
+                            <a href="{{ route('children') }}" data-title="Детская мебель"> Детская мебель </a>
                         </li>
                         <li class="d-flex align-items-center justify-content-center">
                             <a href="{{ route('landing') }}#contact-form" data-title="Контакты" class="btn btn-tertiary btn-small-font btn-secondary has-radius-huge"> Перезвонить </a>

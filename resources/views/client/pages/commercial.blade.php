@@ -7,7 +7,7 @@
             <div class="visual-inner commercial-banner dark-overlay parallax" data-stellar-background-ratio="0.55">
                 <div class="centered">
                     <div class="container">
-                        <div class="visual-text-large text-left visual-center">
+                        <div class="visual-text-large text-center visual-center">
                             <h1 class="visual-title visual-sub-title">Офисная и торговая мебель</h1>
                         </div>
                     </div>
@@ -19,13 +19,14 @@
         <div class="content-wrapper">
             <section class="content-block">
                 <div class="container text-center">
-                    <div class="heading bottom-space">
+                    <div class="heading bottom-space mb-4">
                         <h2>Индивидуальность. <span>Сервис.</span> Качество.</h2>
                     </div>
                     <div class="description">
-                        <p>
-                            Стильный современный офис с комфортном всегда украшает качественно продуманная мебель. В торговых точках важно на каких полках лежит товар, в каком стиле все продуманно, что клиенту было удобно выбрать и остаться довольным.
-                        </p>
+                        <h5>
+                            Стильный современный офис с комфортном всегда украшает качественно продуманная мебель. <br>
+                            В торговых точках важно на каких полках лежит товар, в каком стиле все продуманно, что клиенту было удобно выбрать и остаться довольным.
+                        </h5>
                     </div>
                 </div>
             </section>

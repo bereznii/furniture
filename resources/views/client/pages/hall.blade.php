@@ -7,7 +7,7 @@
             <div class="visual-inner hall-banner dark-overlay parallax" data-stellar-background-ratio="0.55">
                 <div class="centered">
                     <div class="container">
-                        <div class="visual-text-large text-right visual-center">
+                        <div class="visual-text-large text-center visual-center">
                             <h1 class="visual-title visual-sub-title">Шкафы и прихожие</h1>
                         </div>
                     </div>
@@ -20,14 +20,15 @@
         <div class="content-wrapper">
             <section class="content-block">
                 <div class="container text-center">
-                    <div class="heading bottom-space">
+                    <div class="heading bottom-space mb-4">
                         <h2>Индивидуальность. <span>Сервис.</span> Качество.</h2>
                     </div>
                     <div class="description">
-                        <p>
-                            Что может радовать как порядок в доме. Шкафы – это то, что делает наш дом в полном порядке. Заказав шкаф на свой вкус и комфорт, вы будете радоваться, как все компактно и продумано.
+                        <h5>
+                            Что может радовать как порядок в доме. Шкафы – это то, что делает наш дом в полном порядке.
+                            Заказав шкаф на свой вкус и комфорт, вы будете радоваться, как все компактно и продумано.<br>
                             Прихожая нас каждый день провожает улыбкой в зеркале и встречает вечером с теплом и запахом любимого дома.
-                        </p>
+                        </h5>
                     </div>
                 </div>
             </section>

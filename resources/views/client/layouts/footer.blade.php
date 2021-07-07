@@ -5,10 +5,21 @@
                 <div class="col-md-8">
                     <div class="footer-nav inline-nav">
                         <ul>
-                            <li><a href="#">Кухни</a></li>
-                            <li><a href="#">Шкафы / Прихожие</a></li>
-                            <li><a href="#">Офисная / Торговая мебель</a></li>
-                            <li><a href="#">Гардеробы</a></li>
+                            <li>
+                                <a href="{{ route('kitchen') }}" data-title="Кухни"> Кухни </a>
+                            </li>
+                            <li>
+                                <a href="{{ route('hall') }}" data-title="Шкафы/Прихожие"> Шкафы / Прихожие </a>
+                            </li>
+                            <li>
+                                <a href="{{ route('commercial') }}" data-title="Офисная/Торговая мебель"> Офисная / Торговая мебель </a>
+                            </li>
+                            <li>
+                                <a href="{{ route('wardrobe') }}" data-title="Гардеробы/Навесные тумбы"> Гардеробы / Навесные тумбы </a>
+                            </li>
+                            <li>
+                                <a href="{{ route('children') }}" data-title="Детская мебель"> Детская мебель </a>
+                            </li>
                         </ul>
                     </div>
                 </div>

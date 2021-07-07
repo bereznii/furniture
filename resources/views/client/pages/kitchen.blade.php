@@ -8,7 +8,7 @@
             <div class="visual-inner kitchen-banner dark-overlay parallax" data-stellar-background-ratio="0.55">
                 <div class="centered">
                     <div class="container">
-                        <div class="visual-text-large text-left visual-center">
+                        <div class="visual-text-large text-center visual-center">
                             <h1 class="visual-title visual-sub-title">Кухни</h1>
                         </div>
                     </div>
@@ -21,13 +21,14 @@
         <div class="content-wrapper">
             <section class="content-block">
                 <div class="container text-center">
-                    <div class="heading bottom-space">
+                    <div class="heading bottom-space mb-4">
                         <h2>Индивидуальность. <span>Сервис.</span> Качество.</h2>
                     </div>
                     <div class="description">
-                        <p>
-                            Ароматное, приятное и уютное место, любимый кофе, сладкие блинчики. Теплый долгожданный ужин. Любимое место, где собирается вся семья. Приятные события, разговоры. И, просто, тишина. Все это ждет Вас на любимой кухне.
-                        </p>
+                        <h5>
+                            Ароматное, приятное и уютное место, любимый кофе, сладкие блинчики. Теплый долгожданный ужин.<br>
+                            Любимое место, где собирается вся семья. Приятные события, разговоры. И, просто, тишина. Все это ждет Вас на любимой кухне.
+                        </h5>
                     </div>
                 </div>
             </section>

@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PagesController;
+use App\Http\Controllers\Client\PagesController;
+use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\Admin\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,3 +24,16 @@ Route::get('/wardrobe', [PagesController::class, 'wardrobePage'])->name('wardrob
 Route::get('/children', [PagesController::class, 'childrenPage'])->name('children');
 
 Route::get('/project', [PagesController::class, 'projectPage'])->name('project');
+
+//Auth::routes();
+Auth::routes(['register' => false]);
+
+Route::prefix('admin')->name('admin.')->group(function () {
+    Route::get('kitchen', [HomeController::class, 'kitchenPage'])->name('kitchen');
+    Route::get('hall', [HomeController::class, 'hallPage'])->name('hall');
+    Route::get('commercial', [HomeController::class, 'commercialPage'])->name('commercial');
+    Route::get('wardrobe', [HomeController::class, 'wardrobePage'])->name('wardrobe');
+    Route::get('children', [HomeController::class, 'childrenPage'])->name('children');
+});
+
+Route::get('/home', [HomeController::class, 'index'])->name('home');

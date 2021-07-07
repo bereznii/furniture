@@ -7,8 +7,8 @@
             <div class="visual-inner wardrobe-banner dark-overlay parallax" data-stellar-background-ratio="0.55">
                 <div class="centered">
                     <div class="container">
-                        <div class="visual-text-large text-right visual-center">
-                            <h1 class="visual-title visual-sub-title">Гардеробы</h1>
+                        <div class="visual-text-large text-center visual-center">
+                            <h1 class="visual-title visual-sub-title">Гардеробы и навесные тумбы</h1>
                         </div>
                     </div>
                 </div>
@@ -19,13 +19,15 @@
         <div class="content-wrapper">
             <section class="content-block">
                 <div class="container text-center">
-                    <div class="heading bottom-space">
+                    <div class="heading bottom-space mb-4">
                         <h2>Индивидуальность. <span>Сервис.</span> Качество.</h2>
                     </div>
                     <div class="description">
-                        <p>
-                            Здесь поместится все, ну почти все что Вам хотелось. Мы об этом позаботимся. «Все до мелочей, все так как я хочу». И все так и будет!
-                        </p>
+                        <h5>
+                            Здесь поместится все, ну почти все что Вам хотелось. Мы об этом позаботимся. «Все до
+                            мелочей, все так как я хочу».<br>
+                            И все так и будет!
+                        </h5>
                     </div>
                 </div>
             </section>

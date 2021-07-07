@@ -8,7 +8,7 @@
             <div class="visual-inner children-banner dark-overlay parallax" data-stellar-background-ratio="0.55">
                 <div class="centered">
                     <div class="container">
-                        <div class="visual-text-large text-left visual-center">
+                        <div class="visual-text-large text-center visual-center">
                             <h1 class="visual-title visual-sub-title">Детская мебель</h1>
                         </div>
                     </div>
@@ -21,13 +21,15 @@
         <div class="content-wrapper">
             <section class="content-block">
                 <div class="container text-center">
-                    <div class="heading bottom-space">
+                    <div class="heading bottom-space mb-4">
                         <h2>Индивидуальность. <span>Сервис.</span> Качество.</h2>
                     </div>
                     <div class="description">
-                        <p>
-                            Нужен текст
-                        </p>
+                        <h5>
+                            Конструктор, игрушки, любимый мишка, шведская стенка, мягкая подушка и звездное небо на потолке.<br>
+                            Вечерние игры с мамой и папой.<br>
+                            Как же классно быть маленьким, а еще лучше иметь свою комнату, в которой все продумано до мелочей. Стеллаж, шкаф для вещей, а еще много удобных полочек, ну и конечно же стол для творчества.
+                        </h5>
                     </div>
                 </div>
             </section>
