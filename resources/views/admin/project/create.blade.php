@@ -34,54 +34,56 @@
                 </div>
                 <hr>
                 <div class="form-group">
-                    <table class="table table-bordered">
-                        <tr>
-                            <td>
-                                <b>Фоновое изображение *</b>
-                                <br>
-                                <small id="nameHelp" class="form-text text-muted">Обязательно</small>
-                            </td>
-                            <td>
-                                <input name="backgroundImage" type="file" id="primaryFile" onchange="document.getElementById('image1').src = window.URL.createObjectURL(this.files[0])">
-                            </td>
-                            <td>
-                                <img id="image1" width="300">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <b>Главное изображение *</b>
-                                <br>
-                                <small id="nameHelp" class="form-text text-muted">Обязательно</small>
-                            </td>
-                            <td>
-                                <input name="primaryImage" type="file" id="primaryFile" onchange="document.getElementById('image2').src = window.URL.createObjectURL(this.files[0])">
-                            </td>
-                            <td>
-                                <img id="image2" width="300">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="3">
-                                <b>Дополнительные фото</b>
-                                <br>
-                                <small id="nameHelp" class="form-text text-muted">Необязательно</small>
-                            </td>
-                        </tr>
-                        @foreach(range(1,10) as $image)
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
                             <tr>
                                 <td>
-                                    <b>#{{ $image }}</b>
+                                    <b>Фоновое изображение *</b>
+                                    <br>
+                                    <small id="nameHelp" class="form-text text-muted">Обязательно</small>
                                 </td>
                                 <td>
-                                    <input name="secondaryImage[image{{ $image }}]" type="file" onchange="document.getElementById('secondaryImage{{ $image }}').src = window.URL.createObjectURL(this.files[0])">
+                                    <input name="backgroundImage" type="file" id="primaryFile" onchange="document.getElementById('image1').src = window.URL.createObjectURL(this.files[0])">
                                 </td>
                                 <td>
-                                    <img id="secondaryImage{{ $image }}" width="300">
+                                    <img id="image1" width="300">
                                 </td>
                             </tr>
-                        @endforeach
-                    </table>
+                            <tr>
+                                <td>
+                                    <b>Главное изображение *</b>
+                                    <br>
+                                    <small id="nameHelp" class="form-text text-muted">Обязательно</small>
+                                </td>
+                                <td>
+                                    <input name="primaryImage" type="file" id="primaryFile" onchange="document.getElementById('image2').src = window.URL.createObjectURL(this.files[0])">
+                                </td>
+                                <td>
+                                    <img id="image2" width="300">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="3">
+                                    <b>Дополнительные фото</b>
+                                    <br>
+                                    <small id="nameHelp" class="form-text text-muted">Необязательно</small>
+                                </td>
+                            </tr>
+                            @foreach(range(1,10) as $image)
+                                <tr>
+                                    <td>
+                                        <b>#{{ $image }}</b>
+                                    </td>
+                                    <td>
+                                        <input name="secondaryImage[image{{ $image }}]" type="file" onchange="document.getElementById('secondaryImage{{ $image }}').src = window.URL.createObjectURL(this.files[0])">
+                                    </td>
+                                    <td>
+                                        <img id="secondaryImage{{ $image }}" width="300">
+                                    </td>
+                                </tr>
+                            @endforeach
+                        </table>
+                    </div>
                 </div>
                 <hr>
                 <button type="submit" class="btn btn-success">Сохранить</button>

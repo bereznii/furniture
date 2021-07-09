@@ -62,7 +62,10 @@
                             <div class="col-lg-12">
                                 <div class="row d-flex align-items-center">
                                     <div class="col-small col-md-3">
-                                        <img src="{{ $project['primaryImage']->getUrl() }}" alt="images">
+                                        <a class="fancybox d-none d-md-block" rel="group" href="{{ $project['primaryImage']->getUrl() }}">
+                                            <img src="{{ $project['primaryImage']->getUrl() }}" alt="images">
+                                        </a>
+                                        <img class="d-block d-sm-block d-md-none" src="{{ $project['primaryImage']->getUrl() }}" alt="images">
                                     </div>
                                     @foreach($project['secondaryImages'] as $project)
                                         <div class="col-small col-md-3">

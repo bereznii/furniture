@@ -38,7 +38,8 @@
                 </div>
                 <hr>
                 <div class="form-group">
-                    <table class="table table-bordered">
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
                         <tr>
                             <td>
                                 <b>Фоновое изображение *</b>
@@ -96,6 +97,7 @@
                             </tr>
                         @endforeach
                     </table>
+                    </div>
                 </div>
                 <hr>
                 <button type="submit" class="btn btn-success">Сохранить</button>
