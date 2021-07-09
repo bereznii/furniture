@@ -69,11 +69,10 @@
                                     </div>
                                     @foreach($project['secondaryImages'] as $project)
                                         <div class="col-small col-md-3">
-                                            <div class="img-block">
-                                                <a class="fancybox" rel="group" href="{{ $project->getUrl() }}">
-                                                    <img src="{{ $project->getUrl() }}" alt="images">
-                                                </a>
-                                            </div>
+                                            <a class="fancybox fancybox d-none d-md-block" rel="group" href="{{ $project->getUrl() }}">
+                                                <img src="{{ $project->getUrl() }}" alt="images">
+                                            </a>
+                                            <img class="d-block d-sm-block d-md-none" src="{{ $project->getUrl() }}" alt="images">
                                         </div>
                                     @endforeach
                                 </div>
