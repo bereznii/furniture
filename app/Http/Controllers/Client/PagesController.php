@@ -3,10 +3,13 @@
 namespace App\Http\Controllers\Client;
 
 use App\Http\Controllers\Controller;
+use App\Models\Category;
+use App\Models\CategoryProject;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
 
 /**
  * Class PagesController
@@ -27,7 +30,12 @@ class PagesController extends Controller
      */
     public function kitchenPage()
     {
-        return view('client/pages/kitchen');
+        $projects = Category::getProjectByCategory(Route::current()->getName());
+
+        return view('client/pages/kitchen', [
+            'category' => Category::CATEGORY_KITCHEN,
+            'projects' => $projects,
+        ]);
     }
 
     /**
@@ -35,7 +43,12 @@ class PagesController extends Controller
      */
     public function hallPage()
     {
-        return view('client/pages/hall');
+        $projects = Category::getProjectByCategory(Route::current()->getName());
+
+        return view('client/pages/hall', [
+            'category' => Category::CATEGORY_HALL,
+            'projects' => $projects,
+        ]);
     }
 
     /**
@@ -43,7 +56,12 @@ class PagesController extends Controller
      */
     public function commercialPage()
     {
-        return view('client/pages/commercial');
+        $projects = Category::getProjectByCategory(Route::current()->getName());
+
+        return view('client/pages/commercial', [
+            'category' => Category::CATEGORY_COMMERCIAL,
+            'projects' => $projects,
+        ]);
     }
 
     /**
@@ -51,22 +69,37 @@ class PagesController extends Controller
      */
     public function wardrobePage()
     {
-        return view('client/pages/wardrobe');
+        $projects = Category::getProjectByCategory(Route::current()->getName());
+
+        return view('client/pages/wardrobe', [
+            'category' => Category::CATEGORY_WARDROBE,
+            'projects' => $projects,
+        ]);
     }
 
     /**
      * @return Application|Factory|View
      */
-    public function childrenPage()
+    public function childrenPage(Request $request)
     {
-        return view('client/pages/children');
+        $projects = Category::getProjectByCategory(Route::current()->getName());
+
+        return view('client/pages/children', [
+            'category' => Category::CATEGORY_CHILDREN,
+            'projects' => $projects,
+        ]);
     }
 
     /**
      * @return Application|Factory|View
      */
-    public function projectPage()
+    public function projectPage(string $category, int $id)
     {
-        return view('client/pages/project');
+        $project = CategoryProject::getFormattedProject($id);
+
+        return view('client/pages/project', [
+            'categoryName' => Category::getNameBySlug($category),
+            'project' => $project,
+        ]);
     }
 }

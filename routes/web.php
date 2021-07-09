@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Client\PagesController;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Admin\HomeController;
+use App\Http\Controllers\Admin\CategoryProjectController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,7 +24,7 @@ Route::get('/commercial', [PagesController::class, 'commercialPage'])->name('com
 Route::get('/wardrobe', [PagesController::class, 'wardrobePage'])->name('wardrobe');
 Route::get('/children', [PagesController::class, 'childrenPage'])->name('children');
 
-Route::get('/project', [PagesController::class, 'projectPage'])->name('project');
+Route::get('/{category}/project/{id}', [PagesController::class, 'projectPage'])->name('project');
 
 //Auth::routes();
 Auth::routes(['register' => false]);
@@ -34,6 +35,11 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::get('commercial', [HomeController::class, 'commercialPage'])->name('commercial');
     Route::get('wardrobe', [HomeController::class, 'wardrobePage'])->name('wardrobe');
     Route::get('children', [HomeController::class, 'childrenPage'])->name('children');
+
+
+    Route::get('{category}/projects/{id}/delete', [CategoryProjectController::class, 'destroy'])->name('projects.delete');
+    Route::get('{category}/projects/{id}/delete/{image}', [CategoryProjectController::class, 'destroyImage'])->name('projects.deleteImage');
+    Route::resource('{category}/projects', CategoryProjectController::class);
 });
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');

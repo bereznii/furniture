@@ -11,11 +11,6 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    private const CATEGORY_KITCHEN = 'kitchen';
-    private const CATEGORY_HALL = 'hall';
-    private const CATEGORY_WARDROBE = 'wardrobe';
-    private const CATEGORY_COMMERCIAL = 'commercial';
-    private const CATEGORY_CHILDREN= 'children';
 
     /**
      * Create a new controller instance.
@@ -42,10 +37,10 @@ class HomeController extends Controller
      */
     public function kitchenPage()
     {
-        $projects = Category::getProjectByCategory(self::CATEGORY_KITCHEN);
+        $projects = Category::getProjectByCategory(Category::CATEGORY_KITCHEN);
 
         return view('admin/category-page', [
-            'categoryName' => self::CATEGORY_KITCHEN,
+            'category' => Category::CATEGORY_KITCHEN,
             'projects' => $projects
         ]);
     }
@@ -55,8 +50,11 @@ class HomeController extends Controller
      */
     public function hallPage()
     {
+        $projects = Category::getProjectByCategory(Category::CATEGORY_HALL);
+
         return view('admin/category-page', [
-            'categoryName' => self::CATEGORY_HALL
+            'category' => Category::CATEGORY_HALL,
+            'projects' => $projects
         ]);
     }
 
@@ -65,8 +63,11 @@ class HomeController extends Controller
      */
     public function commercialPage()
     {
+        $projects = Category::getProjectByCategory(Category::CATEGORY_COMMERCIAL);
+
         return view('admin/category-page', [
-            'categoryName' => self::CATEGORY_COMMERCIAL
+            'category' => Category::CATEGORY_COMMERCIAL,
+            'projects' => $projects
         ]);
     }
 
@@ -75,8 +76,11 @@ class HomeController extends Controller
      */
     public function wardrobePage()
     {
+        $projects = Category::getProjectByCategory(Category::CATEGORY_WARDROBE);
+
         return view('admin/category-page', [
-            'categoryName' => self::CATEGORY_WARDROBE
+            'category' => Category::CATEGORY_WARDROBE,
+            'projects' => $projects
         ]);
     }
 
@@ -85,8 +89,11 @@ class HomeController extends Controller
      */
     public function childrenPage()
     {
+        $projects = Category::getProjectByCategory(Category::CATEGORY_CHILDREN);
+
         return view('admin/category-page', [
-            'categoryName' => self::CATEGORY_CHILDREN
+            'category' => Category::CATEGORY_CHILDREN,
+            'projects' => $projects
         ]);
     }
 }

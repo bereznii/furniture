@@ -77,6 +77,5 @@
         <script type="text/javascript" src="{{ asset('vendors/rev-slider/revolution-addons/snow/revolution.addon.snow.min.js') }}"></script>
         <!-- revolutions slider script -->
         <script src="{{ asset('js/revolution.js') }}"></script>
-
     </body>
 </html>

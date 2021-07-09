@@ -16,7 +16,8 @@ class CreateCategoryProjectsTable extends Migration
         Schema::create('category_projects', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('category_id');
-            $table->string('name');
+            $table->string('name')->nullable();
+            $table->text('description')->nullable();
             $table->timestamps();
         });
     }
