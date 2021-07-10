@@ -4,7 +4,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Client\PagesController;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Admin\HomeController;
+use App\Http\Controllers\Admin\MetaDataController;
 use App\Http\Controllers\Admin\CategoryProjectController;
+use App\Http\Controllers\CallbackController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,6 +26,8 @@ Route::get('/commercial', [PagesController::class, 'commercialPage'])->name('com
 Route::get('/wardrobe', [PagesController::class, 'wardrobePage'])->name('wardrobe');
 Route::get('/children', [PagesController::class, 'childrenPage'])->name('children');
 
+Route::post('/callback', [CallbackController::class, 'store'])->name('callback');
+
 Route::get('/{category}/project/{id}', [PagesController::class, 'projectPage'])->name('project');
 
 //Auth::routes();
@@ -40,6 +44,7 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::get('{category}/projects/{id}/delete', [CategoryProjectController::class, 'destroy'])->name('projects.delete');
     Route::get('{category}/projects/{id}/delete/{image}', [CategoryProjectController::class, 'destroyImage'])->name('projects.deleteImage');
     Route::resource('{category}/projects', CategoryProjectController::class);
+    Route::resource('meta', MetaDataController::class);
 });
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');

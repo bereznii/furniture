@@ -114,6 +114,9 @@ class CategoryProjectController extends Controller
 
         $record->name = $request->get('name');
         $record->description = $request->get('description');
+        $record->meta_title = $request->get('meta_title');
+        $record->meta_keywords = $request->get('meta_keywords');
+        $record->meta_description = $request->get('meta_description');
 
         if ($request->hasFile('backgroundImage')) {
             $record->addMedia($request->file('backgroundImage'))->toMediaCollection('backgroundImage');

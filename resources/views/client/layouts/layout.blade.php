@@ -4,7 +4,9 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-        <title>Мебельный мастер</title>
+        <title>{{ $metaData['title'] ?? 'Мебельный мастер' }}</title>
+        <meta name="description" content="{{ $metaData['description'] ?? 'Проектирую и изготавливаю корпусную мебель по индивидуальным заказам для дома, офиса и торговых точек. Превращаю Ваши идеи в реальность, от эскиза до результата. Способствую созданию комфорта, уюта и максимального удобства для Вашего Дома и Бизнеса!' }}">
+        <meta name="keywords" content="{{ $metaData['keywords'] ?? '' }}">
         <!-- Font Icons -->
         <link media="all" rel="stylesheet" href="{{ asset('css/home/fonts/icomoon/icomoon.css') }}">
         <link media="all" rel="stylesheet" href="{{ asset('css/home/fonts/roxine-font-icon/roxine-font.css') }}">

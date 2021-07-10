@@ -22,17 +22,18 @@
             <form action="{{ route('admin.projects.store', ['category' => $category]) }}" method="POST" enctype='multipart/form-data'>
                 @csrf
                 <input type="hidden" name="category" value="{{ $category }}">
+                <h3>Информация о проекте</h3>
                 <div class="form-group">
                     <label for="name">Название проекта</label>
-                    <input type="text" name="name" class="form-control" id="name" aria-describedby="nameHelp">
+                    <input type="text" name="name" class="form-control" id="name" value="{{ old('name') }}" aria-describedby="nameHelp">
                     <small id="nameHelp" class="form-text text-muted">Необязательно</small>
                 </div>
                 <div class="form-group">
                     <label for="description">Описание</label>
-                    <input type="text" name="description" class="form-control" id="description" aria-describedby="descriptionHelp">
+                    <input type="text" name="description" class="form-control" id="description" value="{{ old('description') }}" aria-describedby="descriptionHelp">
                     <small id="descriptionHelp" class="form-text text-muted">Необязательно</small>
                 </div>
-                <hr>
+                <h3>Фотографии</h3>
                 <div class="form-group">
                     <div class="table-responsive">
                         <table class="table table-bordered">
@@ -84,6 +85,19 @@
                             @endforeach
                         </table>
                     </div>
+                </div>
+                <h3>Мета данные</h3>
+                <div class="form-group">
+                    <label for="name">Заголовок страницы</label>
+                    <input name="meta_title" value="{{ old('meta_title') }}" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="name">Ключевые слова</label>
+                    <textarea name="meta_keywords" rows="7" class="form-control">{{ old('meta_keywords') }}</textarea>
+                </div>
+                <div class="form-group">
+                    <label for="name">Описание</label>
+                    <textarea name="meta_description" rows="7" class="form-control">{{ old('meta_description') }}</textarea>
                 </div>
                 <hr>
                 <button type="submit" class="btn btn-success">Сохранить</button>

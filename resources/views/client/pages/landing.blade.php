@@ -210,24 +210,47 @@
                             <div class="row">
                                 <div class="col-lg-6">
                                     <!-- contact form -->
-                                    <form action="#" method="post" id="contact_form" class="waituk_contact-form">
+                                    <form action="{{ route('callback') }}" method="post" id="contact_form" class="waituk_contact-form">
+                                        @csrf
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <input type="text" placeholder="Как я могу к Вам обращаться? *" id="con_fname" name="con_fname" class="form-control">
+                                                    <input type="text" placeholder="Как я могу к Вам обращаться? *" id="con_fname" maxlength="255" name="name" value="{{ old('name') }}" class="form-control">
+                                                    @error('name')
+                                                        <small class="form-text text-danger">
+                                                            {{ $message }}
+                                                        </small>
+                                                    @enderror
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <input type="tel" placeholder="Номер телефона *" id="con_phone" name="con_phone" class="form-control">
+                                                    <input type="tel" placeholder="Номер телефона *" id="con_phone" maxlength="255" name="phone" value="{{ old('phone') }}" class="form-control">
+                                                    @error('phone')
+                                                        <small class="form-text text-danger">
+                                                            {{ $message }}
+                                                        </small>
+                                                    @enderror
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <textarea class="form-control" placeholder="Комментарий" id="con_message" name="con_message"></textarea>
+                                            <textarea class="form-control" placeholder="Комментарий" id="con_message" name="message">{{ old('message') }}</textarea>
+                                            @error('message')
+                                                <small class="form-text text-danger">
+                                                    {{ $message }}
+                                                </small>
+                                            @enderror
                                         </div>
+                                        @if (session('callback'))
+                                            <div class="form-group">
+                                                <div class="alert alert-success">
+                                                    {{ session('callback') }}
+                                                </div>
+                                            </div>
+                                        @endif
                                         <div class="btn-container">
-                                            <button id="btn_sent" class="btn btn-secondary btn-arrow" disabled>Оставить заявку</button>
+                                            <button id="btn_sent" class="btn btn-secondary btn-arrow">Оставить заявку</button>
                                             <p id="error_message"> </p>
                                         </div>
                                     </form>

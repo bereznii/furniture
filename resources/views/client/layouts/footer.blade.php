@@ -2,7 +2,7 @@
     <div class="content-block footer-main">
         <div class="container">
             <div class="row">
-                <div class="col-md-8">
+                <div class="col-md-9">
                     <div class="footer-nav inline-nav">
                         <ul>
                             <li>
@@ -23,7 +23,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-md-4 text-right">
+                <div class="col-md-3 text-right">
                     <ul class="social-network with-text">
                         <li><a href="https://www.facebook.com/Mebelnyymaster"><span class="icon-facebook"></span></a></li>
                         <li><a href="https://www.instagram.com/mebelnyymaster"><span class="icon-instagram"></span> </a></li>

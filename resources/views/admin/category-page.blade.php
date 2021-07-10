@@ -4,6 +4,7 @@
     <div class="card">
         <div class="card-body">
             <a href="{{ route('admin.projects.create', ['category' => $category]) }}" type="button" class="btn btn-primary mb-3">Добавить проект</a>
+            <a href="{{ route('admin.meta.edit', ['metum' => $category]) }}" type="button" class="btn btn-secondary mb-3">Редактировать мета данные категории</a>
             <br>
             <div class="table-responsive">
                 <table class="table table-hover">

@@ -5,7 +5,7 @@
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="{{ route("home") }}">Главная</a></li>
             <li class="breadcrumb-item"><a href="{{ route("admin.{$category}") }}">{{ $categoryName }}</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Добавить</li>
+            <li class="breadcrumb-item active" aria-current="page">Редактировать проект</li>
         </ol>
     </nav>
     <div class="card">
@@ -24,6 +24,7 @@
                 @method('PUT')
                 <input type="hidden" name="category" value="{{ $category }}">
                 <input type="hidden" name="projectId" value="{{ $project->id }}">
+                <h3>Информация о проекте</h3>
                 <div class="form-group">
                     <label for="name">Название проекта</label>
                     <input type="text" name="name" class="form-control" id="name" aria-describedby="nameHelp" value="{{ $project->name }}">
@@ -31,12 +32,12 @@
                 </div>
                 <div class="form-group">
                     <label for="description">Описание</label>
-                    <textarea name="description" class="form-control" id="description" rows="15" aria-describedby="descriptionHelp">
+                    <textarea name="description" class="form-control rich" id="description" rows="15" aria-describedby="descriptionHelp">
                         {!! $project->description !!}
                     </textarea>
                     <small id="descriptionHelp" class="form-text text-muted">Необязательно</small>
                 </div>
-                <hr>
+                <h3>Фотографии</h3>
                 <div class="form-group">
                     <div class="table-responsive">
                         <table class="table table-bordered">
@@ -98,6 +99,19 @@
                         @endforeach
                     </table>
                     </div>
+                </div>
+                <h3>Мета данные</h3>
+                <div class="form-group">
+                    <label for="name">Заголовок страницы</label>
+                    <input name="meta_title" value="{{ $project->meta_title }}" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="name">Ключевые слова</label>
+                    <textarea name="meta_keywords" rows="7" class="form-control">{{ $project->meta_keywords }}</textarea>
+                </div>
+                <div class="form-group">
+                    <label for="name">Описание</label>
+                    <textarea name="meta_description" rows="7" class="form-control">{{ $project->meta_description }}</textarea>
                 </div>
                 <hr>
                 <button type="submit" class="btn btn-success">Сохранить</button>

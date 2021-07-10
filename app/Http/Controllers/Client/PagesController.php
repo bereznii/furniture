@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Client;
 use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\CategoryProject;
+use App\Models\MetaData;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
@@ -35,6 +36,7 @@ class PagesController extends Controller
         return view('client/pages/kitchen', [
             'category' => Category::CATEGORY_KITCHEN,
             'projects' => $projects,
+            'metaData' => MetaData::getForCategoryPageBySlug(Category::CATEGORY_KITCHEN)
         ]);
     }
 
@@ -48,6 +50,7 @@ class PagesController extends Controller
         return view('client/pages/hall', [
             'category' => Category::CATEGORY_HALL,
             'projects' => $projects,
+            'metaData' => MetaData::getForCategoryPageBySlug(Category::CATEGORY_HALL)
         ]);
     }
 
@@ -61,6 +64,7 @@ class PagesController extends Controller
         return view('client/pages/commercial', [
             'category' => Category::CATEGORY_COMMERCIAL,
             'projects' => $projects,
+            'metaData' => MetaData::getForCategoryPageBySlug(Category::CATEGORY_COMMERCIAL)
         ]);
     }
 
@@ -74,6 +78,7 @@ class PagesController extends Controller
         return view('client/pages/wardrobe', [
             'category' => Category::CATEGORY_WARDROBE,
             'projects' => $projects,
+            'metaData' => MetaData::getForCategoryPageBySlug(Category::CATEGORY_WARDROBE)
         ]);
     }
 
@@ -87,6 +92,7 @@ class PagesController extends Controller
         return view('client/pages/children', [
             'category' => Category::CATEGORY_CHILDREN,
             'projects' => $projects,
+            'metaData' => MetaData::getForCategoryPageBySlug(Category::CATEGORY_CHILDREN)
         ]);
     }
 
@@ -100,6 +106,7 @@ class PagesController extends Controller
         return view('client/pages/project', [
             'categoryName' => Category::getNameBySlug($category),
             'project' => $project,
+            'metaData' => MetaData::getForProjectById($id)
         ]);
     }
 }

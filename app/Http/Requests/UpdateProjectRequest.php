@@ -29,6 +29,9 @@ class UpdateProjectRequest extends FormRequest
         return [
             'category' => 'required|string',
             'name' => 'nullable|string|max:255',
+            'meta_title' => 'nullable|string|max:50000',
+            'meta_keywords' => 'nullable|string|max:50000',
+            'meta_description' => 'nullable|string|max:50000',
             'description' => 'nullable|string',
             'backgroundImage' => $project->hasMedia('backgroundImage')
                 ? ''
