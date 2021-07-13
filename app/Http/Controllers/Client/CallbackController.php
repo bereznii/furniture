@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Client;
 
+use App\Http\Controllers\Controller;
 use App\Http\Requests\CallbackRequest;
 use App\Models\Callback;
 use App\Notifications\CallbackMessage;
 use Illuminate\Http\Request;
-use NotificationChannels\Telegram\TelegramMessage;
 
 class CallbackController extends Controller
 {

@@ -6,7 +6,8 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Admin\MetaDataController;
 use App\Http\Controllers\Admin\CategoryProjectController;
-use App\Http\Controllers\CallbackController;
+use App\Http\Controllers\Client\CallbackController;
+use App\Http\Controllers\Client\SitemapController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,8 +31,11 @@ Route::post('/callback', [CallbackController::class, 'store'])->name('callback')
 
 Route::get('/{category}/project/{id}', [PagesController::class, 'projectPage'])->name('project');
 
-//Auth::routes();
-Auth::routes(['register' => false]);
+Auth::routes([
+    'register' => false,
+    'verify' => false,
+    'reset' => false
+]);
 
 Route::prefix('admin')->name('admin.')->group(function () {
     Route::get('kitchen', [HomeController::class, 'kitchenPage'])->name('kitchen');
@@ -48,3 +52,5 @@ Route::prefix('admin')->name('admin.')->group(function () {
 });
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
+
+Route::get('sitemap.xml', [SitemapController::class, 'index']);
