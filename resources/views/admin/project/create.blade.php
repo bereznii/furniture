@@ -30,7 +30,9 @@
                 </div>
                 <div class="form-group">
                     <label for="description">Описание</label>
-                    <input type="text" name="description" class="form-control" id="description" value="{{ old('description') }}" aria-describedby="descriptionHelp">
+                    <textarea name="description" class="form-control rich" id="description" rows="15" aria-describedby="descriptionHelp">
+                        {!! old('description') !!}
+                    </textarea>
                     <small id="descriptionHelp" class="form-text text-muted">Необязательно</small>
                 </div>
                 <h3>Фотографии</h3>
