@@ -8,6 +8,7 @@
         <meta name="description" content="{{ $metaData['description'] ?? 'Проектирую и изготавливаю корпусную мебель по индивидуальным заказам для дома, офиса и торговых точек. Превращаю Ваши идеи в реальность, от эскиза до результата. Способствую созданию комфорта, уюта и максимального удобства для Вашего Дома и Бизнеса!' }}">
         <meta name="keywords" content="{{ $metaData['keywords'] ?? '' }}">
         <meta name="robots" content="index, follow">
+        <link rel="icon" href="{{ asset('img/icons/wardrobe2.ico') }}" type="image/icon type">
         <!-- Font Icons -->
         <link media="all" rel="stylesheet" href="{{ asset('css/home/fonts/icomoon/icomoon.css') }}">
         <link media="all" rel="stylesheet" href="{{ asset('css/home/fonts/roxine-font-icon/roxine-font.css') }}">
@@ -31,6 +32,23 @@
         <link media="all" rel="stylesheet" href="{{ asset('css/home/custom.css') }}">
     </head>
     <body>
+
+        <script type="application/ld+json">
+         {
+             "@context": "https://schema.org",
+             "@type": "Organization",
+             "name": "Мебельный Мастер",
+             "legalName": "Мебельный Мастер",
+             "url": "https://mebelnyymaster.com.ua/",
+             "description": "Проектирую и изготавливаю корпусную мебель по индивидуальным заказам для дома, офиса и торговых точек. Превращаю Ваши идеи в реальность, от эскиза до результата. Способствую созданию комфорта, уюта и максимального удобства для Вашего Дома и Бизнеса!",
+             "foundingDate": "2017",
+             "contactPoint": {
+                 "@type": "ContactPoint",
+                 "contactType": "Customer support",
+                 "telephone" : "+380638443748"
+                }
+         }
+        </script>
 
         <!-- main wrapper -->
         <div id="wrapper">
