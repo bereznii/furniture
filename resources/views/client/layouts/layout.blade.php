@@ -33,7 +33,7 @@
         <!-- Rev Slider -->
         <link rel="stylesheet" type="text/css" href="{{ asset('vendors/rev-slider/revolution/css/settings.css') }}">
         <!-- Custom CSS -->
-        <link media="all" rel="stylesheet" href="{{ asset('css/home/construction.css') }}">
+        <link media="all" rel="stylesheet" href="{{ asset('css/construction.min.css') }}">
         <link media="all" rel="stylesheet" href="{{ asset('css/home/custom.css') }}">
     </head>
     <body>
