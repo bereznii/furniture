@@ -67,7 +67,7 @@
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="bg-stretch img-wrap wow slideInLeft">
-                                    <img src="{{ asset('img/steps/step1-kitchen.jpg') }}" alt="images">
+                                    <img src="{{ asset('img/steps/step1-kitchen.jpg') }}" loading="lazy" alt="images">
                                 </div>
                             </div>
                             <div class="col col-lg-6">
@@ -93,7 +93,7 @@
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="bg-stretch img-wrap wow slideInRight">
-                                    <img src="{{ asset('img/steps/step2-kitchen.jpg') }}" alt="images">
+                                    <img src="{{ asset('img/steps/step2-kitchen.jpg') }}" loading="lazy" alt="images">
                                 </div>
                             </div>
                             <div class="col-lg-6">
@@ -122,7 +122,7 @@
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="bg-stretch img-wrap wow slideInLeft">
-                                    <img src="{{ asset('img/steps/step3-kitchen.jpg') }}" alt="images">
+                                    <img src="{{ asset('img/steps/step3-kitchen.jpg') }}" loading="lazy" alt="images">
                                 </div>
                             </div>
                             <div class="col-lg-6">
