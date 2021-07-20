@@ -10,7 +10,8 @@
         <meta name="robots" content="index, follow">
         <link rel="icon" href="{{ asset('img/icons/wardrobe2.ico') }}" type="image/icon type">
         <!-- Font Icons -->
-        <link media="all" rel="stylesheet" href="{{ asset('css/home/fonts/icomoon/icomoon.css') }}">
+        <link rel="preload" href="{{ asset('css/home/fonts/icomoon/icomoon.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="{{ asset('css/home/fonts/icomoon/icomoon.css') }}"></noscript>
 
         <link rel="preload" href="{{ asset('css/home/fonts/roxine-font-icon/roxine-font.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="{{ asset('css/home/fonts/roxine-font-icon/roxine-font.css') }}"></noscript>
@@ -18,7 +19,8 @@
         <link rel="preload" href="{{ asset('vendors/font-awesome/css/font-awesome.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="{{ asset('vendors/font-awesome/css/font-awesome.css') }}"></noscript>
         <!-- Vendors -->
-        <link media="all" rel="stylesheet" href="{{ asset('vendors/owl-carousel/dist/assets/owl.carousel.min.css') }}">
+        <link rel="preload" href="{{ asset('vendors/owl-carousel/dist/assets/owl.carousel.min.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="{{ asset('vendors/owl-carousel/dist/assets/owl.carousel.min.css') }}"></noscript>
         <link media="all" rel="stylesheet" href="{{ asset('vendors/owl-carousel/dist/assets/owl.theme.default.min.css') }}">
 
         <link rel="preload" href="{{ asset('vendors/animate/animate.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -31,7 +33,8 @@
         <link rel="preload" href="{{ asset('css/home/bootstrap.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="{{ asset('css/home/bootstrap.css') }}"></noscript>
         <!-- Rev Slider -->
-        <link rel="stylesheet" type="text/css" href="{{ asset('vendors/rev-slider/revolution/css/settings.css') }}">
+        <link rel="preload" href="{{ asset('vendors/rev-slider/revolution/css/settings.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="{{ asset('vendors/rev-slider/revolution/css/settings.css') }}"></noscript>
         <!-- Custom CSS -->
         <link media="all" rel="stylesheet" href="{{ asset('css/construction.min.css') }}">
         <link media="all" rel="stylesheet" href="{{ asset('css/home/custom.css') }}">
