@@ -29,7 +29,7 @@ Route::get('/children', [PagesController::class, 'childrenPage'])->name('childre
 
 Route::post('/callback', [CallbackController::class, 'store'])->name('callback');
 
-Route::get('/{category}/project/{id}', [PagesController::class, 'projectPage'])->name('project');
+Route::get('/{category}/{id}', [PagesController::class, 'projectPage'])->name('project');
 
 Auth::routes([
     'register' => false,

@@ -21,7 +21,11 @@ class CallbackController extends Controller
         $record->phone = $request->get('phone');
         $record->message = $request->get('message');
         $record->save();
-        $record->notify(new CallbackMessage());
+
+        foreach (Callback::getUsersForNotifications() as $chatId) {
+            $record->telegramChatId = $chatId;
+            $record->notify(new CallbackMessage());
+        }
 
         return redirect('/#contact-form')->with('callback', 'Ваша заявка сохранена!');
     }

@@ -15,7 +15,7 @@
                             <div class="breadcrumb-block">
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="{{ route('landing') }}">Мебельный мастер</a></li>
-                                    <li class="breadcrumb-item"><a href="{{ route('hall') }}"> {{ $categoryName }}</a></li>
+                                    <li class="breadcrumb-item"><a href="{{ route($categorySlug) }}"> {{ $categoryName }}</a></li>
                                     @if(isset($project['info']->name))
                                         <li class="breadcrumb-item active"> {{ $project['info']->name }}</li>
                                     @endif

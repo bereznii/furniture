@@ -29,25 +29,11 @@ class CallbackMessage extends Notification
      */
     public function toTelegram($notifiable)
     {
-        foreach ($this->getUsers() as $userId) {
-            return TelegramMessage::create()
-                ->to($userId)
-                ->content("Новая заявка!
+        return TelegramMessage::create()
+            ->to($notifiable->telegramChatId)
+            ->content("Новая заявка!
 *Имя:* _{$notifiable->name}_
 *Номер телефона:* _{$notifiable->phone}_
 *Комментарий:* _{$notifiable->message}_");
-        }
-    }
-
-    /**
-     * @return array
-     */
-    private function getUsers(): array
-    {
-        $usersString = config('services.telegram-bot-api.users');
-
-        return isset($usersString)
-            ? explode(',', $usersString)
-            : [];
     }
 }

@@ -104,6 +104,7 @@ class PagesController extends Controller
         $project = CategoryProject::getFormattedProject($id);
 
         return view('client/pages/project', [
+            'categorySlug' => $category,
             'categoryName' => Category::getNameBySlug($category),
             'project' => $project,
             'metaData' => MetaData::getForProjectById($id)
