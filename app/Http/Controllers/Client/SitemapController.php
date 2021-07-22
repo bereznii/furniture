@@ -17,7 +17,7 @@ class SitemapController extends Controller
 
         $sitemapUrls = [];
         foreach ($projects as $project) {
-            $sitemapUrls[] = url("{$project['category']['slug']}/project/{$project['id']}");
+            $sitemapUrls[] = url("{$project['category']['slug']}/projects/{$project['id']}");
         }
 
         return response()->view('client.index', [
