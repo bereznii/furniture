@@ -15,7 +15,7 @@
                                 <a href="{{ route('commercial') }}" data-title="Офисная/Торговая мебель"> Офисная / Торговая мебель </a>
                             </li>
                             <li>
-                                <a href="{{ route('wardrobe') }}" data-title="Гардеробы/Навесные тумбы"> Гардеробы / Навесные тумбы </a>
+                                <a href="{{ route('wardrobe') }}" data-title="Гардеробы/Тумбы"> Гардеробы / Тумбы </a>
                             </li>
                             <li>
                                 <a href="{{ route('children') }}" data-title="Детская мебель"> Детская мебель </a>
@@ -25,8 +25,8 @@
                 </div>
                 <div class="col-md-3 text-right">
                     <ul class="social-network with-text">
-                        <li><a href="https://www.facebook.com/Mebelnyymaster"><span class="icon-facebook"></span></a></li>
-                        <li><a href="https://www.instagram.com/mebelnyymaster"><span class="icon-instagram"></span> </a></li>
+                        <li><a target="_blank" href="https://www.facebook.com/Mebelnyymaster"><span class="icon-facebook"></span></a></li>
+                        <li><a target="_blank" href="https://www.instagram.com/mebelnyymaster"><span class="icon-instagram"></span> </a></li>
                     </ul>
                 </div>
             </div>

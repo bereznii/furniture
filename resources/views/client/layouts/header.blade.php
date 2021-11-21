@@ -22,12 +22,12 @@
                             <ul class="i-list i-list-i-block i-list-i-block-sm i-list-i-block-no-hover pad-0-sm margin-bottom-0 float-right">
                                 <li>
                                     <div class="dropdown mini-nav mini-nav-no-bg-hover">
-                                        <a href="https://www.facebook.com/Mebelnyymaster"><span class="icon-facebook"></span></a>
+                                        <a target="_blank" href="https://www.facebook.com/Mebelnyymaster"><span class="icon-facebook"></span></a>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="dropdown mini-nav mini-nav-no-bg-hover">
-                                        <a href="https://www.instagram.com/mebelnyymaster"><span class="icon-instagram"></span></a>
+                                        <a target="_blank" href="https://www.instagram.com/mebelnyymaster"><span class="icon-instagram"></span></a>
                                     </div>
                                 </li>
                             </ul>
@@ -54,7 +54,7 @@
                             <a href="{{ route('commercial') }}" data-title="Офисная/Торговая мебель"> Офисная / Торговая мебель </a>
                         </li>
                         <li>
-                            <a href="{{ route('wardrobe') }}" data-title="Гардеробы/Навесные тумбы"> Гардеробы / Навесные тумбы </a>
+                            <a href="{{ route('wardrobe') }}" data-title="Гардеробы/Тумбы"> Гардеробы / Тумбы </a>
                         </li>
                         <li>
                             <a href="{{ route('children') }}" data-title="Детская мебель"> Детская мебель </a>
@@ -69,8 +69,8 @@
                             <a href="tel:+380986035327" class="nav-link"><span class="custom-icon-phone-ring"></span> +38 (098) 603 53 27</a>
                         </li>
                         <li class="d-flex align-items-center justify-content-around mobile-phone-icons">
-                            <a href="https://www.facebook.com/Mebelnyymaster"><span class="icon-facebook"></span></a>
-                            <a href="https://www.instagram.com/mebelnyymaster"><span class="icon-instagram"></span></a>
+                            <a target="_blank" href="https://www.facebook.com/Mebelnyymaster"><span class="icon-facebook"></span></a>
+                            <a target="_blank" href="https://www.instagram.com/mebelnyymaster"><span class="icon-instagram"></span></a>
                         </li>
                     </ul>
                 </div>

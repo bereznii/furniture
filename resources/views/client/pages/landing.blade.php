@@ -188,7 +188,7 @@
                             <div class="icon">
                                 <img src="{{ asset('img/icons/wardrobe.png') }}" alt="Wardrobe Logo">
                             </div>
-                            <h3 class="block-title">Гардеробы</h3>
+                            <h3 class="block-title">Гардеробы и тумбы</h3>
                         </a>
                         <a href="{{ route('children') }}" class="info-block info-block-v2 block-4 text-center col-sm-4 col-lg-3">
                             <div class="icon">

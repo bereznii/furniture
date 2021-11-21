@@ -36,7 +36,7 @@ class CategoryMetaSeeder extends Seeder
             ],
             [
                 'category_slug' => 'wardrobe',
-                'title' => 'Мебельный мастер | Гардеробы и навесные тумбы',
+                'title' => 'Мебельный мастер | Гардеробы и тумбы',
                 'created_at' => date('Y-m-d H:i:s'),
                 'updated_at' => date('Y-m-d H:i:s'),
             ],

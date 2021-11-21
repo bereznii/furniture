@@ -36,7 +36,7 @@ class DatabaseSeeder extends Seeder
                 'updated_at' => date('Y-m-d H:i:s'),
             ],
             [
-                'name' => 'Гардеробы и навесные тумбы',
+                'name' => 'Гардеробы и тумбы',
                 'slug' => 'wardrobe',
                 'created_at' => date('Y-m-d H:i:s'),
                 'updated_at' => date('Y-m-d H:i:s'),

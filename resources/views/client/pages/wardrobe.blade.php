@@ -23,7 +23,7 @@
       "item":
        {
          "@id": "https://mebelnyymaster.com.ua/wardrobe",
-         "name": "Гардеробы и навесные тумбы"
+         "name": "Гардеробы и тумбы"
        }
       }
      ]
@@ -37,7 +37,7 @@
                 <div class="centered">
                     <div class="container">
                         <div class="visual-text-large text-center visual-center">
-                            <h1 class="visual-title visual-sub-title">Гардеробы и навесные тумбы</h1>
+                            <h1 class="visual-title visual-sub-title">Гардеробы и тумбы</h1>
                         </div>
                     </div>
                 </div>

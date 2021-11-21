@@ -15,7 +15,7 @@
                     Офисная / Торговая мебель
                 </a>
                 <a href="{{ route('admin.wardrobe') }}" class="list-group-item list-group-item-action @if(strpos(url()->current(), 'wardrobe')  !== false) active @endif">
-                    Гардеробы / Навесные тумбы
+                    Гардеробы / Тумбы
                 </a>
                 <a href="{{ route('admin.children') }}" class="list-group-item list-group-item-action @if(strpos(url()->current(), 'children')  !== false) active @endif">
                     Детская мебель
