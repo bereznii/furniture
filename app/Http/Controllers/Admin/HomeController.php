@@ -40,7 +40,7 @@ class HomeController extends Controller
         $projects = Category::getProjectByCategory(Category::CATEGORY_KITCHEN);
 
         return view('admin/category-page', [
-            'category' => Category::CATEGORY_KITCHEN,
+            'category' => Category::getRouteBySlug(Category::CATEGORY_KITCHEN),
             'projects' => $projects
         ]);
     }
@@ -53,7 +53,7 @@ class HomeController extends Controller
         $projects = Category::getProjectByCategory(Category::CATEGORY_HALL);
 
         return view('admin/category-page', [
-            'category' => Category::CATEGORY_HALL,
+            'category' => Category::getRouteBySlug(Category::CATEGORY_HALL),
             'projects' => $projects
         ]);
     }
@@ -66,7 +66,7 @@ class HomeController extends Controller
         $projects = Category::getProjectByCategory(Category::CATEGORY_COMMERCIAL);
 
         return view('admin/category-page', [
-            'category' => Category::CATEGORY_COMMERCIAL,
+            'category' => Category::getRouteBySlug(Category::CATEGORY_COMMERCIAL),
             'projects' => $projects
         ]);
     }
@@ -79,7 +79,7 @@ class HomeController extends Controller
         $projects = Category::getProjectByCategory(Category::CATEGORY_WARDROBE);
 
         return view('admin/category-page', [
-            'category' => Category::CATEGORY_WARDROBE,
+            'category' => Category::getRouteBySlug(Category::CATEGORY_WARDROBE),
             'projects' => $projects
         ]);
     }
@@ -92,7 +92,7 @@ class HomeController extends Controller
         $projects = Category::getProjectByCategory(Category::CATEGORY_CHILDREN);
 
         return view('admin/category-page', [
-            'category' => Category::CATEGORY_CHILDREN,
+            'category' => Category::getRouteBySlug(Category::CATEGORY_CHILDREN),
             'projects' => $projects
         ]);
     }

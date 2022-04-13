@@ -29,6 +29,11 @@
                     <small id="nameHelp" class="form-text text-muted">Необязательно</small>
                 </div>
                 <div class="form-group">
+                    <label for="slug">Slug</label>
+                    <input type="text" name="slug" class="form-control" id="slug" aria-describedby="slug" value="{{ old('slug') }}">
+                    <small id="slug" class="form-text text-muted">Обязательно</small>
+                </div>
+                <div class="form-group">
                     <label for="description">Описание</label>
                     <textarea name="description" class="form-control rich" id="description" rows="15" aria-describedby="descriptionHelp">
                         {!! old('description') !!}

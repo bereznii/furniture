@@ -20,24 +20,9 @@ use App\Http\Controllers\Client\SitemapController;
 |
 */
 
-Route::get('/', [PagesController::class, 'landingPage'])->name('landing');
-Route::get('/kitchen', [PagesController::class, 'kitchenPage'])->name('kitchen');
-Route::get('/hall', [PagesController::class, 'hallPage'])->name('hall');
-Route::get('/commercial', [PagesController::class, 'commercialPage'])->name('commercial');
-Route::get('/wardrobe', [PagesController::class, 'wardrobePage'])->name('wardrobe');
-Route::get('/children', [PagesController::class, 'childrenPage'])->name('children');
-
-Route::post('/callback', [CallbackController::class, 'store'])->name('callback');
-
-Route::get('/{category}/projects/{id}', [PagesController::class, 'projectPage'])->name('project');
-
-Auth::routes([
-    'register' => false,
-    'verify' => false,
-    'reset' => false
-]);
-
+// Admin
 Route::prefix('admin')->name('admin.')->group(function () {
+    Route::get('/', [HomeController::class, 'kitchenPage']);
     Route::get('kitchen', [HomeController::class, 'kitchenPage'])->name('kitchen');
     Route::get('hall', [HomeController::class, 'hallPage'])->name('hall');
     Route::get('commercial', [HomeController::class, 'commercialPage'])->name('commercial');
@@ -50,6 +35,24 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::resource('{category}/projects', CategoryProjectController::class);
     Route::resource('meta', MetaDataController::class);
 });
+
+// Client
+Route::get('/', [PagesController::class, 'landingPage'])->name('landing');
+Route::get('/kuhni', [PagesController::class, 'kitchenPage'])->name('kitchen');
+Route::get('/shkafy-prihozhie', [PagesController::class, 'hallPage'])->name('hall');
+Route::get('/ofisnaya-torgovaya-mebel', [PagesController::class, 'commercialPage'])->name('commercial');
+Route::get('/garderoby-tumby', [PagesController::class, 'wardrobePage'])->name('wardrobe');
+Route::get('/detskaya-mebel', [PagesController::class, 'childrenPage'])->name('children');
+
+Route::post('/callback', [CallbackController::class, 'store'])->name('callback');
+
+Route::get('/{category}/{slug}', [PagesController::class, 'projectPage'])->name('project');
+
+Auth::routes([
+    'register' => false,
+    'verify' => false,
+    'reset' => false
+]);
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 

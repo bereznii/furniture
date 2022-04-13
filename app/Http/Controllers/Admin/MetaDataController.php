@@ -55,16 +55,18 @@ class MetaDataController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param $category
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
-    public function edit($categorySlug)
+    public function edit($category)
     {
+        $categorySlug = Category::getSlugByRoute($category);
+
         $categoryName = Category::getNameBySlug($categorySlug);
         $meta = MetaData::getBySlug($categorySlug);
 
         return view('admin.meta.edit', [
-            'category' => $categorySlug,
+            'category' => $category,
             'categoryName' => $categoryName,
             'meta' => $meta,
         ]);
@@ -79,7 +81,7 @@ class MetaDataController extends Controller
      */
     public function update(UpdateCategoryMetaRequest $request, $id)
     {
-        $record = MetaData::getBySlug($id);
+        $record = MetaData::getBySlug(Category::getSlugByRoute($id));
         $record->title = $request->get('title');
         $record->keywords = $request->get('keywords');
         $record->description = $request->get('description');

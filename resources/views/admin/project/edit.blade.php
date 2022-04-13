@@ -31,6 +31,11 @@
                     <small id="nameHelp" class="form-text text-muted">Необязательно</small>
                 </div>
                 <div class="form-group">
+                    <label for="slug">Slug</label>
+                    <input type="text" name="slug" class="form-control" id="slug" aria-describedby="slug" value="{{ $project->slug }}">
+                    <small id="slug" class="form-text text-muted">Обязательно</small>
+                </div>
+                <div class="form-group">
                     <label for="description">Описание</label>
                     <textarea name="description" class="form-control rich" id="description" rows="15" aria-describedby="descriptionHelp">
                         {!! $project->description !!}
@@ -51,7 +56,7 @@
                                 <input name="backgroundImage" type="file" id="primaryFile" onchange="document.getElementById('image1').src = window.URL.createObjectURL(this.files[0])">
                             </td>
                             <td>
-                                <img src="{{ $primaryImage[0]->getUrl() }}" id="image1" width="300">
+                                <img src="{{ $backgroundImage[0]->getUrl() }}" id="image1" width="300">
                             </td>
                         </tr>
                         <tr>
@@ -64,7 +69,7 @@
                                 <input name="primaryImage" type="file" id="primaryFile" onchange="document.getElementById('image2').src = window.URL.createObjectURL(this.files[0])">
                             </td>
                             <td>
-                                <img src="{{ $backgroundImage[0]->getUrl() }}" id="image2" width="300">
+                                <img src="{{ $primaryImage[0]->getUrl() }}" id="image2" width="300">
                             </td>
                         </tr>
                         <tr>

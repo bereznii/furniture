@@ -22,8 +22,10 @@
                         <tr>
                             <th scope="row">{{ $project->id }}</th>
                             <td>{!! $project->name ?? "<i>Отсутствует</i>" !!}</td>
-                            <td>{!! $project->description ? mb_substr($project->description, 0, 50) . '...' : "<i>Отсутствует</i>" !!}</td>
-                            <td><img src="{{ $project->getMedia('primaryImage')[0]->getUrl() }}" width="120"></td>
+                            <td>{{ strip_tags($project->description ? mb_substr($project->description, 0, 50) . '...' : "<i>Отсутствует</i>") }}</td>
+                            <td>
+                                <img src="{{ $project->getMedia('primaryImage')[0]->getUrl() }}" width="120" alt="Photo">
+                            </td>
                             <td>
                                 <a href="{{ route('admin.projects.edit', ['category' => $category, 'project' => $project->id]) }}" type="button" class="btn btn-success mb-3">Редактировать</a>
                                 <a href="{{ route('admin.projects.delete', ['category' => $category, 'id' => $project->id]) }}"

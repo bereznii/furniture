@@ -5,7 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
-class CategoryMetaSeeder extends Seeder
+class CategoriesSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,35 +14,35 @@ class CategoryMetaSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('meta_data')->truncate();
-        DB::table('meta_data')->insert([
+        DB::table('categories')->truncate();
+        DB::table('categories')->insert([
             [
-                'category_slug' => 'kuhni',
-                'title' => 'Мебельный мастер | Кухни',
+                'name' => 'Кухни',
+                'slug' => 'kuhni',
                 'created_at' => date('Y-m-d H:i:s'),
                 'updated_at' => date('Y-m-d H:i:s'),
             ],
             [
-                'category_slug' => 'shkafy-prihozhie',
-                'title' => 'Мебельный мастер | Шкафа и прихожие',
+                'name' => 'Шкафы и прихожие',
+                'slug' => 'shkafy-prihozhie',
                 'created_at' => date('Y-m-d H:i:s'),
                 'updated_at' => date('Y-m-d H:i:s'),
             ],
             [
-                'category_slug' => 'ofisnaya-torgovaya-mebel',
-                'title' => 'Мебельный мастер | Офисная и торговая мебель',
+                'name' => 'Офисная и торговая мебель',
+                'slug' => 'ofisnaya-torgovaya-mebel',
                 'created_at' => date('Y-m-d H:i:s'),
                 'updated_at' => date('Y-m-d H:i:s'),
             ],
             [
-                'category_slug' => 'garderoby-tumby',
-                'title' => 'Мебельный мастер | Гардеробы и тумбы',
+                'name' => 'Гардеробы и тумбы',
+                'slug' => 'garderoby-tumby',
                 'created_at' => date('Y-m-d H:i:s'),
                 'updated_at' => date('Y-m-d H:i:s'),
             ],
             [
-                'category_slug' => 'detskaya-mebel',
-                'title' => 'Мебельный мастер | Детская мебель',
+                'name' => 'Детская мебель',
+                'slug' => 'detskaya-mebel',
                 'created_at' => date('Y-m-d H:i:s'),
                 'updated_at' => date('Y-m-d H:i:s'),
             ],

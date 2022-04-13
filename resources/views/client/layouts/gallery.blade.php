@@ -8,12 +8,12 @@
             <div class="row d-flex align-items-center">
                 @foreach($projects as $project)
                     <div class="gallery-item col-md-6 col-lg-3 col-xl-3">
-                        <a href="{{ route('project', ['category' => $category, 'id' => $project->id]) }}">
+                        <a href="{{ route('project', ['category' => $category, 'slug' => $project->slug]) }}">
                             <figure class="caption-hover-full">
                                 <div class="image-wrapper">
                                     <img src="{{ $project->getMedia('primaryImage')[0]->getUrl() }}"
                                          style="object-fit: cover;"
-                                         alt="images description"
+                                         alt="images description">
                                 </div>
                                 <div class="overlay-gallery">
                                     Подробнее

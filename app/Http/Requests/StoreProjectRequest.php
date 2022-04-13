@@ -26,6 +26,7 @@ class StoreProjectRequest extends FormRequest
         return [
             'category' => 'required|string',
             'name' => 'nullable|string|max:255',
+            'slug' => 'required|string|max:255|unique:category_projects|regex:/^[A-Za-z0-9]+(?:-[A-Za-z0-9]+)*$/',
             'description' => 'nullable|string|max:50000',
             'meta_title' => 'nullable|string|max:50000',
             'meta_keywords' => 'nullable|string|max:50000',
@@ -48,6 +49,9 @@ class StoreProjectRequest extends FormRequest
             'description.max' => 'Максимальная длина поля 50000 символов',
             'backgroundImage.required' => 'Добавьте фоновое фото',
             'primaryImage.required' => 'Добавьте основное фото',
+            'slug.required' => 'Добавьте Slug',
+            'slug.unique' => 'Slug должен быть уникальным',
+            'slug.regex' => 'Slug должен быть в правильном формате',
             'backgroundImage.max' => 'Максимальный дополнительного размер фото 5МБ',
             'primaryImage.max' => 'Максимальный дополнительного размер фото 5МБ',
             'secondaryImage.max' => 'Максимальный дополнительного азмер фото 5МБ',

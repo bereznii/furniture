@@ -31,7 +31,7 @@ class PagesController extends Controller
      */
     public function kitchenPage()
     {
-        $projects = Category::getProjectByCategory(Route::current()->getName());
+        $projects = Category::getProjectByCategoryWithSlug(Category::CATEGORY_KITCHEN);
 
         return view('client/pages/kitchen', [
             'category' => Category::CATEGORY_KITCHEN,
@@ -45,7 +45,7 @@ class PagesController extends Controller
      */
     public function hallPage()
     {
-        $projects = Category::getProjectByCategory(Route::current()->getName());
+        $projects = Category::getProjectByCategoryWithSlug(Category::CATEGORY_HALL);
 
         return view('client/pages/hall', [
             'category' => Category::CATEGORY_HALL,
@@ -59,7 +59,7 @@ class PagesController extends Controller
      */
     public function commercialPage()
     {
-        $projects = Category::getProjectByCategory(Route::current()->getName());
+        $projects = Category::getProjectByCategoryWithSlug(Category::CATEGORY_COMMERCIAL);
 
         return view('client/pages/commercial', [
             'category' => Category::CATEGORY_COMMERCIAL,
@@ -73,7 +73,7 @@ class PagesController extends Controller
      */
     public function wardrobePage()
     {
-        $projects = Category::getProjectByCategory(Route::current()->getName());
+        $projects = Category::getProjectByCategoryWithSlug(Category::CATEGORY_WARDROBE);
 
         return view('client/pages/wardrobe', [
             'category' => Category::CATEGORY_WARDROBE,
@@ -87,7 +87,7 @@ class PagesController extends Controller
      */
     public function childrenPage(Request $request)
     {
-        $projects = Category::getProjectByCategory(Route::current()->getName());
+        $projects = Category::getProjectByCategory(Category::CATEGORY_CHILDREN);
 
         return view('client/pages/children', [
             'category' => Category::CATEGORY_CHILDREN,
@@ -99,15 +99,15 @@ class PagesController extends Controller
     /**
      * @return Application|Factory|View
      */
-    public function projectPage(string $category, int $id)
+    public function projectPage(string $category, string $projectSlug)
     {
-        $project = CategoryProject::getFormattedProject($id);
-
+        $project = CategoryProject::getFormattedProject($projectSlug);
+        
         return view('client/pages/project', [
-            'categorySlug' => $category,
+            'categorySlug' => Category::getRouteBySlug($category),
             'categoryName' => Category::getNameBySlug($category),
             'project' => $project,
-            'metaData' => MetaData::getForProjectById($id)
+            'metaData' => MetaData::getForProjectById($projectSlug)
         ]);
     }
 }

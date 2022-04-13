@@ -28,12 +28,13 @@ class CategoryProjectController extends Controller
      *
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
-    public function create(string $categorySlug)
+    public function create(string $categoryRoute)
     {
-        $categoryName = Category::getNameBySlug($categorySlug);
+        $slug = Category::getSlugByRoute($categoryRoute);
+        $categoryName = Category::getNameBySlug($slug);
 
         return view('admin/project/create', [
-            'category' => $categorySlug,
+            'category' => $categoryRoute,
             'categoryName' => $categoryName,
         ]);
     }
@@ -50,10 +51,11 @@ class CategoryProjectController extends Controller
     {
         $record = new CategoryProject();
 
-        $categorySlug = $request->get('category');
-        $record->category_id = Category::getIdBySlug($categorySlug);
+        $category = $request->get('category');
+        $record->category_id = Category::getIdBySlug(Category::getSlugByRoute($category));
 
         $record->name = $request->get('name');
+        $record->slug = $request->get('slug');
         $record->description = $request->get('description');
 
         $record->addMedia($request->file('backgroundImage'))->toMediaCollection('backgroundImage');
@@ -66,7 +68,7 @@ class CategoryProjectController extends Controller
         }
 
         $record->save();
-        return redirect()->route("admin.{$categorySlug}");
+        return redirect()->route("admin.{$category}");
     }
 
     /**
@@ -89,12 +91,11 @@ class CategoryProjectController extends Controller
      */
     public function edit(string $categorySlug, int $id)
     {
-        $categoryName = Category::getNameBySlug($categorySlug);
         $project = CategoryProject::find($id);
 
         return view('admin/project/edit', [
             'category' => $categorySlug,
-            'categoryName' => $categoryName,
+            'categoryName' => $project->category->name,
             'project' => $project,
             'primaryImage' => $project->getMedia('primaryImage'),
             'backgroundImage' => $project->getMedia('backgroundImage'),
@@ -105,6 +106,7 @@ class CategoryProjectController extends Controller
      * Update the specified resource in storage.
      *
      * @param UpdateProjectRequest $request
+     * @param string $categorySlug
      * @param int $id
      * @return \Illuminate\Http\RedirectResponse
      */
@@ -113,15 +115,18 @@ class CategoryProjectController extends Controller
         $record = CategoryProject::find($id);
 
         $record->name = $request->get('name');
+        $record->slug = $request->get('slug');
         $record->description = $request->get('description');
         $record->meta_title = $request->get('meta_title');
         $record->meta_keywords = $request->get('meta_keywords');
         $record->meta_description = $request->get('meta_description');
 
         if ($request->hasFile('backgroundImage')) {
+            $record->clearMediaCollection('backgroundImage');
             $record->addMedia($request->file('backgroundImage'))->toMediaCollection('backgroundImage');
         }
         if ($request->hasFile('primaryImage')) {
+            $record->clearMediaCollection('primaryImage');
             $record->addMedia($request->file('primaryImage'))->toMediaCollection('primaryImage');
         }
 
@@ -146,10 +151,7 @@ class CategoryProjectController extends Controller
      */
     public function destroy(string $categorySlug, int $id)
     {
-        $project = CategoryProject::where([
-            'category_id' => Category::getIdBySlug($categorySlug),
-            'id' => $id,
-        ])->first();
+        $project = CategoryProject::findOrFail($id);
 
         if (isset($project)) {
             $project->clearMediaCollection('primaryImage');
@@ -166,14 +168,12 @@ class CategoryProjectController extends Controller
      *
      * @param string $categorySlug
      * @param int $id
+     * @param string $imageName
      * @return \Illuminate\Http\RedirectResponse
      */
     public function destroyImage(string $categorySlug, int $id, string $imageName)
     {
-        $project = CategoryProject::where([
-            'category_id' => Category::getIdBySlug($categorySlug),
-            'id' => $id,
-        ])->first();
+        $project = CategoryProject::findOrFail($id);
 
         if (isset($project)) {
             $project->clearMediaCollection($imageName);
