@@ -42,3 +42,6 @@ artisan:
 
 require:
 	docker-compose run --rm php-cli composer require $(p)
+
+feature:
+	docker-compose run --rm php-cli php artisan test --testsuite=Feature

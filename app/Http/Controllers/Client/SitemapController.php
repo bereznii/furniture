@@ -13,11 +13,11 @@ class SitemapController extends Controller
      */
     public function index()
     {
-        $projects = CategoryProject::with('category')->get()->toArray();
+        $projects = CategoryProject::with('category')->whereNotNull('slug')->get()->toArray();
 
         $sitemapUrls = [];
         foreach ($projects as $project) {
-            $sitemapUrls[] = url("{$project['category']['slug']}/projects/{$project['id']}");
+            $sitemapUrls[] = url("{$project['category']['slug']}/{$project['slug']}");
         }
 
         return response()->view('client.index', [

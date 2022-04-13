@@ -2,6 +2,7 @@
 
 namespace Tests\Feature;
 
+use App\Models\CategoryProject;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
@@ -14,8 +15,12 @@ class ExampleTest extends TestCase
      */
     public function testBasicTest()
     {
-        $response = $this->get('/');
+        $projects = CategoryProject::with('category')->whereNotNull('slug')->get()->toArray();
 
-        $response->assertStatus(200);
+        foreach ($projects as $project) {
+            $url = url("{$project['category']['slug']}/{$project['slug']}");
+            $response = $this->get($url);
+            $response->assertStatus(200);
+        }
     }
 }
