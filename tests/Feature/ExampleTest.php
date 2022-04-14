@@ -13,12 +13,27 @@ class ExampleTest extends TestCase
      *
      * @return void
      */
-    public function testBasicTest()
+    public function testProjectPages()
     {
         $projects = CategoryProject::with('category')->whereNotNull('slug')->get()->toArray();
 
         foreach ($projects as $project) {
             $url = url("{$project['category']['slug']}/{$project['slug']}");
+            $response = $this->get($url);
+            $response->assertStatus(200);
+        }
+    }
+    /**
+     * A basic test example.
+     *
+     * @return void
+     */
+    public function testCategoriesPages()
+    {
+        $projects = CategoryProject::with('category')->whereNotNull('slug')->get()->toArray();
+
+        foreach ($projects as $project) {
+            $url = url("{$project['category']['slug']}");
             $response = $this->get($url);
             $response->assertStatus(200);
         }
