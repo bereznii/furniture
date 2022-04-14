@@ -9,31 +9,31 @@
         </url>
     @endforeach
     <url>
-        <loc>https://mebelnyymaster.com.ua/hall</loc>
+        <loc>https://mebelnyymaster.com.ua/shkafy-prihozhie</loc>
         <lastmod>{{ now()->tz('GMT')->toAtomString() }}</lastmod>
         <changefreq>always</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://mebelnyymaster.com.ua/commercial</loc>
+        <loc>https://mebelnyymaster.com.ua/ofisnaya-torgovaya-mebel</loc>
         <lastmod>{{ now()->tz('GMT')->toAtomString() }}</lastmod>
         <changefreq>always</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://mebelnyymaster.com.ua/wardrobe</loc>
+        <loc>https://mebelnyymaster.com.ua/garderoby-tumby</loc>
         <lastmod>{{ now()->tz('GMT')->toAtomString() }}</lastmod>
         <changefreq>always</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://mebelnyymaster.com.ua/children</loc>
+        <loc>https://mebelnyymaster.com.ua/detskaya-mebel</loc>
         <lastmod>{{ now()->tz('GMT')->toAtomString() }}</lastmod>
         <changefreq>always</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://mebelnyymaster.com.ua/kitchen</loc>
+        <loc>https://mebelnyymaster.com.ua/kuhni</loc>
         <lastmod>{{ now()->tz('GMT')->toAtomString() }}</lastmod>
         <changefreq>always</changefreq>
         <priority>1.0</priority>
