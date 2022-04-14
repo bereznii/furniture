@@ -7,20 +7,30 @@ use App\Http\Requests\StoreProjectRequest;
 use App\Http\Requests\UpdateProjectRequest;
 use App\Models\Category;
 use App\Models\CategoryProject;
-use Illuminate\Http\Request;
-use Illuminate\Http\Response;
-use Illuminate\Http\UploadedFile;
 
-class CategoryProjectController extends Controller
+class ProjectsController extends Controller
 {
     /**
-     * Display a listing of the resource.
-     *
-     * @return Response
+     * @return void
      */
-    public function index()
+    public function __construct()
     {
-        //
+        $this->middleware('auth');
+    }
+
+    /**
+     * @param string $category
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
+     */
+    public function index(string $categoryKey)
+    {
+        $slug = Category::getSlugByKey($categoryKey);
+
+        return view('admin/project/index', [
+            'categoryKey' => $categoryKey,
+            'projects' => Category::getProjectByCategory($slug),
+            'categoryName' => Category::getNameBySlug($slug),
+        ]);
     }
 
     /**
@@ -28,14 +38,13 @@ class CategoryProjectController extends Controller
      *
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
-    public function create(string $categoryRoute)
+    public function create(string $categoryKey)
     {
-        $slug = Category::getSlugByRoute($categoryRoute);
-        $categoryName = Category::getNameBySlug($slug);
+        $slug = Category::getSlugByKey($categoryKey);
 
         return view('admin/project/create', [
-            'category' => $categoryRoute,
-            'categoryName' => $categoryName,
+            'categoryKey' => $categoryKey,
+            'categoryName' => Category::getNameBySlug($slug),
         ]);
     }
 
@@ -52,7 +61,7 @@ class CategoryProjectController extends Controller
         $record = new CategoryProject();
 
         $category = $request->get('category');
-        $record->category_id = Category::getIdBySlug(Category::getSlugByRoute($category));
+        $record->category_id = Category::getIdBySlug(Category::getSlugByKey($category));
 
         $record->name = $request->get('name');
         $record->slug = $request->get('slug');
@@ -68,33 +77,28 @@ class CategoryProjectController extends Controller
         }
 
         $record->save();
-        return redirect()->route("admin.{$category}");
-    }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return Response
-     */
-    public function show($id)
-    {
-        //
+        $request->session()->flash('status', 'Проект успешно добавлен!');
+
+        return redirect()->route('admin.categories.projects.edit', [
+            'categoryKey' => $category,
+            'id' => $record->id
+        ]);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param string $categorySlug
+     * @param string $categoryKey
      * @param int $id
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
-    public function edit(string $categorySlug, int $id)
+    public function edit(string $categoryKey, int $id)
     {
         $project = CategoryProject::find($id);
 
         return view('admin/project/edit', [
-            'category' => $categorySlug,
+            'categoryKey' => $categoryKey,
             'categoryName' => $project->category->name,
             'project' => $project,
             'primaryImage' => $project->getMedia('primaryImage'),
@@ -106,11 +110,13 @@ class CategoryProjectController extends Controller
      * Update the specified resource in storage.
      *
      * @param UpdateProjectRequest $request
-     * @param string $categorySlug
+     * @param string $categoryKey
      * @param int $id
      * @return \Illuminate\Http\RedirectResponse
+     * @throws \Spatie\MediaLibrary\MediaCollections\Exceptions\FileDoesNotExist
+     * @throws \Spatie\MediaLibrary\MediaCollections\Exceptions\FileIsTooBig
      */
-    public function update(UpdateProjectRequest $request, string $categorySlug, int $id)
+    public function update(UpdateProjectRequest $request, string $categoryKey, int $id)
     {
         $record = CategoryProject::find($id);
 
@@ -139,17 +145,20 @@ class CategoryProjectController extends Controller
         }
 
         $record->save();
-        return redirect()->route("admin.projects.edit", ['category' => $categorySlug, 'project' => $id]);
+
+        $request->session()->flash('status', 'Проект успешно отредактирован!');
+
+        return redirect()->route("admin.categories.projects.edit", ['categoryKey' => $categoryKey, 'id' => $id]);
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param string $categorySlug
+     * @param string $categoryKey
      * @param int $id
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function destroy(string $categorySlug, int $id)
+    public function destroy(string $categoryKey, int $id)
     {
         $project = CategoryProject::findOrFail($id);
 
@@ -158,27 +167,33 @@ class CategoryProjectController extends Controller
             $project->clearMediaCollection('backgroundImage');
             $project->clearMediaCollection('secondaryImages');
             $project->delete();
+
+            session()->flash('status', 'Проект успешно удален!');
         }
 
-        return redirect()->route("admin.{$categorySlug}");
+        return redirect()->route('admin.categories.projects.index', [
+            'categoryKey' => $categoryKey
+        ]);
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param string $categorySlug
+     * @param string $categoryKey
      * @param int $id
      * @param string $imageName
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function destroyImage(string $categorySlug, int $id, string $imageName)
+    public function destroyImage(string $categoryKey, int $id, string $imageName)
     {
         $project = CategoryProject::findOrFail($id);
 
         if (isset($project)) {
             $project->clearMediaCollection($imageName);
+
+            session()->flash('status', 'Фото успешно удалено!');
         }
 
-        return redirect()->route("admin.projects.edit", ['category' => $categorySlug, 'project' => $id]);
+        return redirect()->route("admin.categories.projects.edit", ['categoryKey' => $categoryKey, 'id' => $id]);
     }
 }

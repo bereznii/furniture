@@ -4,6 +4,7 @@ namespace App\Http\Requests;
 
 use App\Models\CategoryProject;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class UpdateProjectRequest extends FormRequest
 {
@@ -29,7 +30,13 @@ class UpdateProjectRequest extends FormRequest
         return [
             'category' => 'required|string',
             'name' => 'nullable|string|max:255',
-            'slug' => 'required|string|max:255|unique:category_projects|regex:/^[A-Za-z0-9]+(?:-[A-Za-z0-9]+)*$/',
+            'slug' => [
+                'required',
+                'string',
+                'max:255',
+                Rule::unique('category_projects')->ignore($project->id),
+                'regex:/^[A-Za-z0-9]+(?:-[A-Za-z0-9]+)*$/'
+            ],
             'meta_title' => 'nullable|string|max:50000',
             'meta_keywords' => 'nullable|string|max:50000',
             'meta_description' => 'nullable|string|max:50000',

@@ -6,67 +6,32 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\UpdateCategoryMetaRequest;
 use App\Models\Category;
 use App\Models\MetaData;
-use Illuminate\Http\Request;
 
 class MetaDataController extends Controller
 {
     /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
+     * @return void
      */
-    public function index()
+    public function __construct()
     {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
+        $this->middleware('auth');
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param $category
+     * @param string $categoryKey
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
-    public function edit($category)
+    public function edit(string $categoryKey)
     {
-        $categorySlug = Category::getSlugByRoute($category);
+        $categorySlug = Category::getSlugByKey($categoryKey);
 
         $categoryName = Category::getNameBySlug($categorySlug);
         $meta = MetaData::getBySlug($categorySlug);
 
         return view('admin.meta.edit', [
-            'category' => $category,
+            'category' => $categoryKey,
             'categoryName' => $categoryName,
             'meta' => $meta,
         ]);
@@ -76,28 +41,21 @@ class MetaDataController extends Controller
      * Update the specified resource in storage.
      *
      * @param UpdateCategoryMetaRequest $request
-     * @param int $id
+     * @param string $categoryKey
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function update(UpdateCategoryMetaRequest $request, $id)
+    public function update(UpdateCategoryMetaRequest $request, string $categoryKey)
     {
-        $record = MetaData::getBySlug(Category::getSlugByRoute($id));
+        $record = MetaData::getBySlug(Category::getSlugByKey($categoryKey));
         $record->title = $request->get('title');
         $record->keywords = $request->get('keywords');
         $record->description = $request->get('description');
         $record->save();
 
-        return redirect()->route('admin.meta.edit', ['metum' => $id]);
-    }
+        session()->flash('status', 'Мета данные успешно отредактированы!');
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
+        return redirect()->route('admin.categories.meta.edit', [
+            'categoryKey' => $categoryKey
+        ]);
     }
 }

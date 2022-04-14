@@ -1,13 +1,16 @@
 @extends('admin.home')
 
-@section('main')
+@section('breadcrumbs')
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="{{ route("home") }}">Главная</a></li>
-            <li class="breadcrumb-item"><a href="{{ route("admin.{$category}") }}">{{ $categoryName }}</a></li>
+            <li class="breadcrumb-item"><a href="{{ route('admin.categories.projects.index', ['categoryKey' => $category]) }}">{{ $categoryName }}</a></li>
             <li class="breadcrumb-item active" aria-current="page">Редактировать мета данные</li>
         </ol>
     </nav>
+@endsection
+
+@section('main')
     <div class="card">
         <div class="card-body">
             @if ($errors->any())
@@ -19,9 +22,8 @@
                     </ul>
                 </div>
             @endif
-            <form action="{{ route('admin.meta.update', ['metum' => $category]) }}" method="POST" enctype='multipart/form-data'>
+            <form action="{{ route('admin.categories.meta.update', ['categoryKey' => $category]) }}" method="POST" enctype='multipart/form-data'>
                 @csrf
-                @method('PUT')
                 <input type="hidden" name="category" value="{{ $category }}">
                 <div class="form-group">
                     <label for="name">Заголовок страницы *</label>

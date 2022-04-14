@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Barryvdh\LaravelIdeHelper\Eloquent;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -25,17 +26,23 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  * @method static \Illuminate\Database\Eloquent\Builder|Category whereName($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Category whereSlug($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Category whereUpdatedAt($value)
- * @mixin \Eloquent
+ * @mixin Eloquent
  */
 class Category extends Model
 {
     use HasFactory;
 
-    public const CATEGORY_KITCHEN = 'kuhni';
-    public const CATEGORY_HALL = 'shkafy-prihozhie';
-    public const CATEGORY_COMMERCIAL = 'ofisnaya-torgovaya-mebel';
-    public const CATEGORY_WARDROBE = 'garderoby-tumby';
-    public const CATEGORY_CHILDREN = 'detskaya-mebel';
+    public const CATEGORY_KITCHEN_SLUG = 'kuhni';
+    public const CATEGORY_HALL_SLUG = 'shkafy-prihozhie';
+    public const CATEGORY_COMMERCIAL_SLUG = 'ofisnaya-torgovaya-mebel';
+    public const CATEGORY_WARDROBE_SLUG = 'garderoby-tumby';
+    public const CATEGORY_CHILDREN_SLUG = 'detskaya-mebel';
+
+    public const CATEGORY_KITCHEN_KEY = 'kitchen';
+    public const CATEGORY_HALL_KEY = 'hall';
+    public const CATEGORY_COMMERCIAL_KEY = 'commercial';
+    public const CATEGORY_WARDROBE_KEY = 'wardrobe';
+    public const CATEGORY_CHILDREN_KEY = 'children';
 
     /**
      * @return HasMany
@@ -55,12 +62,12 @@ class Category extends Model
     }
 
     /**
-     * @param string $slug
+     * @param string $categoryKey
      * @return Collection
      */
-    public static function getProjectByCategoryWithSlug(string $slug): Collection
+    public static function getProjectsWithSlugByCategoryKey(string $categoryKey): Collection
     {
-        $category = self::where(['slug' => $slug])->first();
+        $category = self::where(['key' => $categoryKey])->first();
 
         if (!isset($category)) {
             return new Collection();
@@ -85,19 +92,19 @@ class Category extends Model
      * @param string $slug
      * @return string
      */
-    public static function getRouteBySlug(string $slug): string
+    public static function getKeyBySlug(string $slug): string
     {
         switch ($slug) {
-            case Category::CATEGORY_KITCHEN:
-                return 'kitchen';
-            case Category::CATEGORY_HALL:
-                return 'hall';
-            case Category::CATEGORY_WARDROBE:
-                return 'wardrobe';
-            case Category::CATEGORY_COMMERCIAL:
-                return 'commercial';
-            case Category::CATEGORY_CHILDREN:
-                return 'children';
+            case Category::CATEGORY_KITCHEN_SLUG:
+                return Category::CATEGORY_KITCHEN_KEY;
+            case Category::CATEGORY_HALL_SLUG:
+                return Category::CATEGORY_HALL_KEY;
+            case Category::CATEGORY_WARDROBE_SLUG:
+                return Category::CATEGORY_WARDROBE_KEY;
+            case Category::CATEGORY_COMMERCIAL_SLUG:
+                return Category::CATEGORY_COMMERCIAL_KEY;
+            case Category::CATEGORY_CHILDREN_SLUG:
+                return Category::CATEGORY_CHILDREN_KEY;
             default:
                 throw new \InvalidArgumentException();
         }
@@ -107,19 +114,19 @@ class Category extends Model
      * @param string $route
      * @return string
      */
-    public static function getSlugByRoute(string $route): string
+    public static function getSlugByKey(string $route): string
     {
         switch ($route) {
-            case 'kitchen':
-                return Category::CATEGORY_KITCHEN;
-            case 'hall':
-                return Category::CATEGORY_HALL;
-            case 'wardrobe':
-                return Category::CATEGORY_WARDROBE;
-            case 'commercial':
-                return Category::CATEGORY_COMMERCIAL;
-            case 'children':
-                return Category::CATEGORY_CHILDREN;
+            case Category::CATEGORY_KITCHEN_KEY:
+                return Category::CATEGORY_KITCHEN_SLUG;
+            case Category::CATEGORY_HALL_KEY:
+                return Category::CATEGORY_HALL_SLUG;
+            case Category::CATEGORY_WARDROBE_KEY:
+                return Category::CATEGORY_WARDROBE_SLUG;
+            case Category::CATEGORY_COMMERCIAL_KEY:
+                return Category::CATEGORY_COMMERCIAL_SLUG;
+            case Category::CATEGORY_CHILDREN_KEY:
+                return Category::CATEGORY_CHILDREN_SLUG;
             default:
                 throw new \InvalidArgumentException();
         }

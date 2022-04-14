@@ -11,10 +11,7 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-
     /**
-     * Create a new controller instance.
-     *
      * @return void
      */
     public function __construct()
@@ -29,71 +26,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return redirect()->route('admin.kitchen');
-    }
-
-    /**
-     * @return Application|Factory|View
-     */
-    public function kitchenPage()
-    {
-        $projects = Category::getProjectByCategory(Category::CATEGORY_KITCHEN);
-
-        return view('admin/category-page', [
-            'category' => Category::getRouteBySlug(Category::CATEGORY_KITCHEN),
-            'projects' => $projects
-        ]);
-    }
-
-    /**
-     * @return Application|Factory|View
-     */
-    public function hallPage()
-    {
-        $projects = Category::getProjectByCategory(Category::CATEGORY_HALL);
-
-        return view('admin/category-page', [
-            'category' => Category::getRouteBySlug(Category::CATEGORY_HALL),
-            'projects' => $projects
-        ]);
-    }
-
-    /**
-     * @return Application|Factory|View
-     */
-    public function commercialPage()
-    {
-        $projects = Category::getProjectByCategory(Category::CATEGORY_COMMERCIAL);
-
-        return view('admin/category-page', [
-            'category' => Category::getRouteBySlug(Category::CATEGORY_COMMERCIAL),
-            'projects' => $projects
-        ]);
-    }
-
-    /**
-     * @return Application|Factory|View
-     */
-    public function wardrobePage()
-    {
-        $projects = Category::getProjectByCategory(Category::CATEGORY_WARDROBE);
-
-        return view('admin/category-page', [
-            'category' => Category::getRouteBySlug(Category::CATEGORY_WARDROBE),
-            'projects' => $projects
-        ]);
-    }
-
-    /**
-     * @return Application|Factory|View
-     */
-    public function childrenPage()
-    {
-        $projects = Category::getProjectByCategory(Category::CATEGORY_CHILDREN);
-
-        return view('admin/category-page', [
-            'category' => Category::getRouteBySlug(Category::CATEGORY_CHILDREN),
-            'projects' => $projects
-        ]);
+        return redirect()->route('admin.categories.projects.index', ['categoryKey' => 'kitchen']);
     }
 }

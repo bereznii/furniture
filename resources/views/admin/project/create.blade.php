@@ -1,13 +1,16 @@
 @extends('admin.home')
 
-@section('main')
+@section('breadcrumbs')
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="{{ route("home") }}">Главная</a></li>
-            <li class="breadcrumb-item"><a href="{{ route("admin.{$category}") }}">{{ $categoryName }}</a></li>
+            <li class="breadcrumb-item"><a href="{{ route('admin.categories.projects.index', ['categoryKey' => $categoryKey]) }}">{{ $categoryName }}</a></li>
             <li class="breadcrumb-item active" aria-current="page">Добавить</li>
         </ol>
     </nav>
+@endsection
+
+@section('main')
     <div class="card">
         <div class="card-body">
             @if ($errors->any())
@@ -19,9 +22,9 @@
                     </ul>
                 </div>
             @endif
-            <form action="{{ route('admin.projects.store', ['category' => $category]) }}" method="POST" enctype='multipart/form-data'>
+            <form action="{{ route('admin.categories.projects.store', ['categoryKey' => $categoryKey]) }}" method="POST" enctype='multipart/form-data'>
                 @csrf
-                <input type="hidden" name="category" value="{{ $category }}">
+                <input type="hidden" name="category" value="{{ $categoryKey }}">
                 <h3>Информация о проекте</h3>
                 <div class="form-group">
                     <label for="name">Название проекта</label>

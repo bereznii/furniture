@@ -8,6 +8,7 @@ use App\Http\Controllers\Admin\MetaDataController;
 use App\Http\Controllers\Admin\CategoryProjectController;
 use App\Http\Controllers\Client\CallbackController;
 use App\Http\Controllers\Client\SitemapController;
+use App\Http\Controllers\Admin\ProjectsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,20 +21,36 @@ use App\Http\Controllers\Client\SitemapController;
 |
 */
 
+
 // Admin
+Auth::routes([
+    'register' => false,
+    'verify' => false,
+    'reset' => false
+]);
 Route::prefix('admin')->name('admin.')->group(function () {
-    Route::get('/', [HomeController::class, 'kitchenPage']);
-    Route::get('kitchen', [HomeController::class, 'kitchenPage'])->name('kitchen');
-    Route::get('hall', [HomeController::class, 'hallPage'])->name('hall');
-    Route::get('commercial', [HomeController::class, 'commercialPage'])->name('commercial');
-    Route::get('wardrobe', [HomeController::class, 'wardrobePage'])->name('wardrobe');
-    Route::get('children', [HomeController::class, 'childrenPage'])->name('children');
 
+    Route::get('/', [HomeController::class, 'index']);
 
-    Route::get('{category}/projects/{id}/delete', [CategoryProjectController::class, 'destroy'])->name('projects.delete');
-    Route::get('{category}/projects/{id}/delete/{image}', [CategoryProjectController::class, 'destroyImage'])->name('projects.deleteImage');
-    Route::resource('{category}/projects', CategoryProjectController::class);
-    Route::resource('meta', MetaDataController::class);
+    Route::prefix('categories')->name('categories.')->group(function () {
+
+        Route::get('/{categoryKey}', [ProjectsController::class, 'index'])->name('projects.index');
+
+        Route::name('meta.')->group(function () {
+            Route::get('/{categoryKey}/meta/edit', [MetaDataController::class, 'edit'])->name('edit');
+            Route::post('/{categoryKey}/meta/update', [MetaDataController::class, 'update'])->name('update');
+        });
+
+        Route::name('projects.')->group(function () {
+            Route::get('/{categoryKey}/create', [ProjectsController::class, 'create'])->name('create');
+            Route::post('/{categoryKey}/store', [ProjectsController::class, 'store'])->name('store');
+            Route::get('/{categoryKey}/projects/{id}/edit', [ProjectsController::class, 'edit'])->name('edit');
+            Route::post('/{categoryKey}/projects/{id}/update', [ProjectsController::class, 'update'])->name('update');
+            Route::get('/{categoryKey}/projects/{id}/delete', [ProjectsController::class, 'destroy'])->name('delete');
+            Route::get('/{categoryKey}/projects/{id}/media/{image}/delete', [ProjectsController::class, 'destroyImage'])->name('deleteImage');
+        });
+
+    });
 });
 
 // Client
@@ -47,12 +64,6 @@ Route::get('/detskaya-mebel', [PagesController::class, 'childrenPage'])->name('c
 Route::post('/callback', [CallbackController::class, 'store'])->name('callback');
 
 Route::get('/{category}/{slug}', [PagesController::class, 'projectPage'])->name('project');
-
-Auth::routes([
-    'register' => false,
-    'verify' => false,
-    'reset' => false
-]);
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 

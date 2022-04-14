@@ -31,12 +31,12 @@ class PagesController extends Controller
      */
     public function kitchenPage()
     {
-        $projects = Category::getProjectByCategoryWithSlug(Category::CATEGORY_KITCHEN);
+        $projects = Category::getProjectsWithSlugByCategoryKey(Category::CATEGORY_KITCHEN_KEY);
 
         return view('client/pages/kitchen', [
-            'category' => Category::CATEGORY_KITCHEN,
+            'category' => Category::CATEGORY_KITCHEN_SLUG,
             'projects' => $projects,
-            'metaData' => MetaData::getForCategoryPageBySlug(Category::CATEGORY_KITCHEN)
+            'metaData' => MetaData::getForCategoryPageBySlug(Category::CATEGORY_KITCHEN_SLUG)
         ]);
     }
 
@@ -45,12 +45,12 @@ class PagesController extends Controller
      */
     public function hallPage()
     {
-        $projects = Category::getProjectByCategoryWithSlug(Category::CATEGORY_HALL);
+        $projects = Category::getProjectsWithSlugByCategoryKey(Category::CATEGORY_HALL_KEY);
 
         return view('client/pages/hall', [
-            'category' => Category::CATEGORY_HALL,
+            'category' => Category::CATEGORY_HALL_SLUG,
             'projects' => $projects,
-            'metaData' => MetaData::getForCategoryPageBySlug(Category::CATEGORY_HALL)
+            'metaData' => MetaData::getForCategoryPageBySlug(Category::CATEGORY_HALL_SLUG)
         ]);
     }
 
@@ -59,12 +59,12 @@ class PagesController extends Controller
      */
     public function commercialPage()
     {
-        $projects = Category::getProjectByCategoryWithSlug(Category::CATEGORY_COMMERCIAL);
+        $projects = Category::getProjectsWithSlugByCategoryKey(Category::CATEGORY_COMMERCIAL_KEY);
 
         return view('client/pages/commercial', [
-            'category' => Category::CATEGORY_COMMERCIAL,
+            'category' => Category::CATEGORY_COMMERCIAL_SLUG,
             'projects' => $projects,
-            'metaData' => MetaData::getForCategoryPageBySlug(Category::CATEGORY_COMMERCIAL)
+            'metaData' => MetaData::getForCategoryPageBySlug(Category::CATEGORY_COMMERCIAL_SLUG)
         ]);
     }
 
@@ -73,12 +73,12 @@ class PagesController extends Controller
      */
     public function wardrobePage()
     {
-        $projects = Category::getProjectByCategoryWithSlug(Category::CATEGORY_WARDROBE);
+        $projects = Category::getProjectsWithSlugByCategoryKey(Category::CATEGORY_WARDROBE_KEY);
 
         return view('client/pages/wardrobe', [
-            'category' => Category::CATEGORY_WARDROBE,
+            'category' => Category::CATEGORY_WARDROBE_SLUG,
             'projects' => $projects,
-            'metaData' => MetaData::getForCategoryPageBySlug(Category::CATEGORY_WARDROBE)
+            'metaData' => MetaData::getForCategoryPageBySlug(Category::CATEGORY_WARDROBE_SLUG)
         ]);
     }
 
@@ -87,12 +87,12 @@ class PagesController extends Controller
      */
     public function childrenPage(Request $request)
     {
-        $projects = Category::getProjectByCategory(Category::CATEGORY_CHILDREN);
+        $projects = Category::getProjectsWithSlugByCategoryKey(Category::CATEGORY_CHILDREN_KEY);
 
         return view('client/pages/children', [
-            'category' => Category::CATEGORY_CHILDREN,
+            'category' => Category::CATEGORY_CHILDREN_SLUG,
             'projects' => $projects,
-            'metaData' => MetaData::getForCategoryPageBySlug(Category::CATEGORY_CHILDREN)
+            'metaData' => MetaData::getForCategoryPageBySlug(Category::CATEGORY_CHILDREN_SLUG)
         ]);
     }
 
@@ -102,9 +102,9 @@ class PagesController extends Controller
     public function projectPage(string $category, string $projectSlug)
     {
         $project = CategoryProject::getFormattedProject($projectSlug);
-        
+
         return view('client/pages/project', [
-            'categorySlug' => Category::getRouteBySlug($category),
+            'categorySlug' => Category::getKeyBySlug($category),
             'categoryName' => Category::getNameBySlug($category),
             'project' => $project,
             'metaData' => MetaData::getForProjectById($projectSlug)

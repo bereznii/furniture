@@ -1,13 +1,17 @@
 @extends('admin.home')
 
-@section('main')
+@section('breadcrumbs')
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="{{ route("home") }}">Главная</a></li>
-            <li class="breadcrumb-item"><a href="{{ route("admin.{$category}") }}">{{ $categoryName }}</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Редактировать проект</li>
+            <li class="breadcrumb-item"><a href="{{ route('admin.categories.projects.index', ['categoryKey' => $categoryKey]) }}">{{ $categoryName }}</a></li>
+            <li class="breadcrumb-item active">Проект №{{ $project->id }}</li>
+            <li class="breadcrumb-item active" aria-current="page">Редактировать</li>
         </ol>
     </nav>
+@endsection
+
+@section('main')
     <div class="card">
         <div class="card-body">
             @if ($errors->any())
@@ -19,10 +23,9 @@
                     </ul>
                 </div>
             @endif
-            <form action="{{ route('admin.projects.update', ['category' => $category, 'project' => $project->id]) }}" method="POST" enctype='multipart/form-data'>
+            <form action="{{ route('admin.categories.projects.update', ['categoryKey' => $categoryKey, 'id' => $project->id]) }}" method="POST" enctype='multipart/form-data'>
                 @csrf
-                @method('PUT')
-                <input type="hidden" name="category" value="{{ $category }}">
+                <input type="hidden" name="category" value="{{ $categoryKey }}">
                 <input type="hidden" name="projectId" value="{{ $project->id }}">
                 <h3>Информация о проекте</h3>
                 <div class="form-group">
@@ -89,7 +92,7 @@
                                     <br>
                                     <br>
                                     @if(count($project->getMedia("image{$image}")) > 0)
-                                        <a href="{{ route('admin.projects.deleteImage', ['category' => $category, 'id' => $project->id, 'image' => "image{$image}"]) }}"
+                                        <a href="{{ route('admin.categories.projects.deleteImage', ['categoryKey' => $categoryKey, 'id' => $project->id, 'image' => "image{$image}"]) }}"
                                            type="button"
                                            class="btn btn-danger mb-3"
                                            onclick="return confirm('Уверены, что хотите удалить изображение?');">
