@@ -2,10 +2,15 @@
 
 namespace App\Http\Requests;
 
+use App\Rules\NotInArray;
 use Illuminate\Foundation\Http\FormRequest;
 
 class CallbackRequest extends FormRequest
 {
+    private const BLACKLIST_NAME = [
+        'henryvef',
+    ];
+
     /**
      * Get the validation rules that apply to the request.
      *
@@ -16,7 +21,12 @@ class CallbackRequest extends FormRequest
         $this->redirect = '/#contact-form';
 
         return [
-            'name' => 'required|string|max:255',
+            'name' => [
+                'required',
+                'string',
+                'max:255',
+                new NotInArray(self::BLACKLIST_NAME)
+            ],
             'phone' => 'required|string|max:255',
             'message' => 'nullable|string|max:50000',
         ];
