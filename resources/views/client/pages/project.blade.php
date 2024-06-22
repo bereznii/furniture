@@ -11,7 +11,7 @@
                 <div class="centered">
                     <div class="container">
                         <div class="visual-text visual-center">
-                            <h1 class="visual-title visual-sub-title">О проекте</h1>
+                            <h1 class="visual-title visual-sub-title">Про проект</h1>
                             <div class="breadcrumb-block">
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="{{ route('landing') }}">Меблевий майстер</a></li>
@@ -42,7 +42,7 @@
                                     <img class="d-block d-sm-block d-md-none" src="{{ $project['primaryImage']->getUrl() }}" alt="images">
                                 </div>
                                 <div class="portfolio-des py-4">
-                                    <h2 class="text-block-title">Описание проекта:</h2>
+                                    <h2 class="text-block-title">Опис проекту:</h2>
                                     {!! $project['info']->description !!}
                                 </div>
                             </div>

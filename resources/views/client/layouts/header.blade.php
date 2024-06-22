@@ -60,7 +60,7 @@
                             <a href="{{ route('children') }}" data-title="Дитячі меблі"> Дитячі меблі </a>
                         </li>
                         <li class="d-flex align-items-center justify-content-center">
-                            <a href="{{ route('landing') }}#contact-form" data-title="Контакты" class="btn btn-tertiary btn-small-font btn-secondary has-radius-huge"> Перезвонить </a>
+                            <a href="{{ route('landing') }}#contact-form" data-title="Контакты" class="btn btn-tertiary btn-small-font btn-secondary has-radius-huge"> Передзвонити </a>
                         </li>
                         <li class="d-flex align-items-center justify-content-center mobile-phone">
                             <a href="tel:+380638443748" class="nav-link"><span class="custom-icon-phone-ring"></span> +38 (063) 844 37 48</a>
