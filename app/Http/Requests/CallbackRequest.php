@@ -40,11 +40,11 @@ class CallbackRequest extends FormRequest
     public function messages()
     {
         return [
-            'name.required' => 'Укажите Ваше имя',
-            'name.max' => 'Максимальная длина поля 255 символов',
-            'phone.required' => 'Укажите номер телефона',
-            'phone.max' => 'Максимальная длина поля 255 символов',
-            'message.max' => 'Максимальная длина поля 50000 символов',
+            'name.required' => "Вкажіть Ваше ім'я",
+            'name.max' => 'Максимальна довжина поля 255 символів',
+            'phone.required' => 'Вкажіть номер телефону',
+            'phone.max' => 'Максимальна довжина поля 255 символів',
+            'message.max' => 'Максимальна довжина поля 50000 символів',
         ];
     }
 }

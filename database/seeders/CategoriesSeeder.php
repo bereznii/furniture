@@ -17,35 +17,35 @@ class CategoriesSeeder extends Seeder
         DB::table('categories')->truncate();
         DB::table('categories')->insert([
             [
-                'name' => 'Кухни',
+                'name' => 'Кухні',
                 'slug' => 'kuhni',
                 'key' => 'kitchen',
                 'created_at' => date('Y-m-d H:i:s'),
                 'updated_at' => date('Y-m-d H:i:s'),
             ],
             [
-                'name' => 'Шкафы и прихожие',
+                'name' => 'Шафи та передпокій',
                 'slug' => 'shkafy-prihozhie',
                 'key' => 'hall',
                 'created_at' => date('Y-m-d H:i:s'),
                 'updated_at' => date('Y-m-d H:i:s'),
             ],
             [
-                'name' => 'Офисная и торговая мебель',
+                'name' => 'Офісні та торгові меблі',
                 'slug' => 'ofisnaya-torgovaya-mebel',
                 'key' => 'commercial',
                 'created_at' => date('Y-m-d H:i:s'),
                 'updated_at' => date('Y-m-d H:i:s'),
             ],
             [
-                'name' => 'Гардеробы и тумбы',
+                'name' => 'Гардероби та тумби',
                 'slug' => 'garderoby-tumby',
                 'key' => 'wardrobe',
                 'created_at' => date('Y-m-d H:i:s'),
                 'updated_at' => date('Y-m-d H:i:s'),
             ],
             [
-                'name' => 'Детская мебель',
+                'name' => 'Дитячі меблі',
                 'slug' => 'detskaya-mebel',
                 'key' => 'children',
                 'created_at' => date('Y-m-d H:i:s'),

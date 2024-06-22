@@ -18,31 +18,31 @@ class CategoryMetaSeeder extends Seeder
         DB::table('meta_data')->insert([
             [
                 'category_slug' => 'kuhni',
-                'title' => 'Мебельный мастер | Кухни',
+                'title' => 'Меблевий майстер | Кухні',
                 'created_at' => date('Y-m-d H:i:s'),
                 'updated_at' => date('Y-m-d H:i:s'),
             ],
             [
                 'category_slug' => 'shkafy-prihozhie',
-                'title' => 'Мебельный мастер | Шкафа и прихожие',
+                'title' => 'Меблевий майстер | Шафи та передпокій',
                 'created_at' => date('Y-m-d H:i:s'),
                 'updated_at' => date('Y-m-d H:i:s'),
             ],
             [
                 'category_slug' => 'ofisnaya-torgovaya-mebel',
-                'title' => 'Мебельный мастер | Офисная и торговая мебель',
+                'title' => 'Меблевий майстер | Офісні та торгові меблі',
                 'created_at' => date('Y-m-d H:i:s'),
                 'updated_at' => date('Y-m-d H:i:s'),
             ],
             [
                 'category_slug' => 'garderoby-tumby',
-                'title' => 'Мебельный мастер | Гардеробы и тумбы',
+                'title' => 'Меблевий майстер | Гардероби та тумби',
                 'created_at' => date('Y-m-d H:i:s'),
                 'updated_at' => date('Y-m-d H:i:s'),
             ],
             [
                 'category_slug' => 'detskaya-mebel',
-                'title' => 'Мебельный мастер | Детская мебель',
+                'title' => 'Меблевий майстер | Дитячі меблі',
                 'created_at' => date('Y-m-d H:i:s'),
                 'updated_at' => date('Y-m-d H:i:s'),
             ],

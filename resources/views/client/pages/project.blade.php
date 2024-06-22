@@ -14,7 +14,7 @@
                             <h1 class="visual-title visual-sub-title">О проекте</h1>
                             <div class="breadcrumb-block">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="{{ route('landing') }}">Мебельный мастер</a></li>
+                                    <li class="breadcrumb-item"><a href="{{ route('landing') }}">Меблевий майстер</a></li>
                                     <li class="breadcrumb-item"><a href="{{ route($categorySlug) }}"> {{ $categoryName }}</a></li>
                                     @if(isset($project['info']->name))
                                         <li class="breadcrumb-item active"> {{ $project['info']->name }}</li>

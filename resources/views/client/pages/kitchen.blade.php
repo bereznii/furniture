@@ -14,7 +14,7 @@
        "item":
        {
         "@id": "https://mebelnyymaster.com.ua/",
-        "name": "Мебельный мастер"
+        "name": "Меблевий майстер"
         }
       },
       {
@@ -23,7 +23,7 @@
       "item":
        {
          "@id": "https://mebelnyymaster.com.ua/kitchen",
-         "name": "Кухни"
+         "name": "Кухні"
        }
       }
      ]
@@ -38,7 +38,7 @@
                 <div class="centered">
                     <div class="container">
                         <div class="visual-text-large text-center visual-center">
-                            <h1 class="visual-title visual-sub-title">Кухни</h1>
+                            <h1 class="visual-title visual-sub-title">Кухні</h1>
                         </div>
                     </div>
                 </div>
@@ -51,7 +51,7 @@
             <section class="content-block">
                 <div class="container text-center">
                     <div class="heading bottom-space mb-4">
-                        <h2>Индивидуальность. <span>Сервис.</span> Качество.</h2>
+                        <h2>Індивідуальність. <span>Сервіс.</span> Якість.</h2>
                     </div>
                     <div class="description">
                         <h5>
@@ -72,19 +72,19 @@
                             </div>
                             <div class="col col-lg-6">
                                 <div class="text-wrap">
-                                    <h3>Первый шаг.</h3>
+                                    <h3>Перший крок.</h3>
                                     <ul>
                                         <li>
-                                            Замер
+                                            Замір
                                         </li>
                                         <li>
-                                            Консультация и выбор фасадов и корпуса
+                                            Консультація та вибір фасадів, корпусу
                                         </li>
                                         <li>
                                             Выбор столешницы
                                         </li>
                                         <li>
-                                            Рекомендации по фурнитуре
+                                            Рекомендації щодо фурнітури
                                         </li>
                                     </ul>
                                 </div>
@@ -98,22 +98,22 @@
                             </div>
                             <div class="col-lg-6">
                                 <div class="text-wrap">
-                                    <h3>Второй шаг.</h3>
+                                    <h3>Другий крок.</h3>
                                     <ul>
                                         <li>
-                                            Расчет стоимости
+                                            Розрахунок вартості
                                         </li>
                                         <li>
-                                            Разработка проекта
+                                            Розробка проекту
                                         </li>
                                         <li>
-                                            3D визуализации
+                                            3D візуалізації
                                         </li>
                                         <li>
-                                            Согласование всех деталей
+                                            Погодження всіх деталей
                                         </li>
                                         <li>
-                                            Подписание договора
+                                            Підписання договору
                                         </li>
                                     </ul>
                                 </div>
@@ -127,13 +127,13 @@
                             </div>
                             <div class="col-lg-6">
                                 <div class="text-wrap">
-                                    <h3>Третий шаг.</h3>
+                                    <h3>Третій крок.</h3>
                                     <ul>
                                         <li>
                                             Доставка
                                         </li>
                                         <li>
-                                            Сборка
+                                            Збирання
                                         </li>
                                         <li>
                                             Установка бытовой техники

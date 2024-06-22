@@ -3,7 +3,7 @@
         <div class="container">
             <div class="contact-container">
                 <div class="demo-wrapper content-block text-center py-0">
-                    <h3>Свяжитесь со мной</h3>
+                    <h3>Зворотній зв'язок</h3>
                     <div class="divider-v2"></div>
                 </div>
                 <div class="row">
@@ -13,20 +13,20 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <input type="text" placeholder="Как я могу к Вам обращаться? *" id="con_fname" name="name" class="form-control">
+                                        <input type="text" placeholder="Як я можу до Вас звертатися? *" id="con_fname" name="name" class="form-control">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <input type="tel" placeholder="Номер телефона *" id="con_phone" name="phone" class="form-control">
+                                        <input type="tel" placeholder="Номер телефону *" id="con_phone" name="phone" class="form-control">
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <textarea class="form-control" placeholder="Комментарий" id="con_message" name="message"></textarea>
+                                <textarea class="form-control" placeholder="Коментарі" id="con_message" name="message"></textarea>
                             </div>
                             <div class="btn-container">
-                                <button id="btn_sent" class="btn btn-secondary btn-arrow">Связаться</button>
+                                <button id="btn_sent" class="btn btn-secondary btn-arrow">Зв'язатися</button>
                                 <p id="error_message"> </p>
                             </div>
                         </form>
@@ -35,7 +35,7 @@
                         <div class="info-slot mb-2">
                             <div class="icon"><span class="custom-icon-map-marker"></span></div>
                             <div class="text">
-                                <address>Киев, Украина</address>
+                                <address>Київ, Україна</address>
                             </div>
                         </div>
                         <div class="info-slot mb-2">

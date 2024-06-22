@@ -41,23 +41,23 @@
                 <button type="button" class="navbar-toggler navbar-toggler-left" data-toggle="collapse" data-target="#mega-menu">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <a class="navbar-brand mr-auto m-sm-auto header-logo" href="{{ route('landing') }}"> Мебельный мастер </a>
+                <a class="navbar-brand mr-auto m-sm-auto header-logo" href="{{ route('landing') }}"> Меблевий майстер </a>
                 <div class="collapse navbar-collapse flex-row-reverse" id="mega-menu">
                     <ul class="nav navbar-nav">
                         <li>
-                            <a href="{{ route('kitchen') }}" data-title="Кухни"> Кухни </a>
+                            <a href="{{ route('kitchen') }}" data-title="Кухні"> Кухні </a>
                         </li>
                         <li>
-                            <a href="{{ route('hall') }}" data-title="Шкафы/Прихожие"> Шкафы / Прихожие </a>
+                            <a href="{{ route('hall') }}" data-title="Шкафы/Прихожие"> Шафи / Передпокій </a>
                         </li>
                         <li>
-                            <a href="{{ route('commercial') }}" data-title="Офисная/Торговая мебель"> Офисная / Торговая мебель </a>
+                            <a href="{{ route('commercial') }}" data-title="Офисная/Торговая мебель"> Офісні / Торгові меблі </a>
                         </li>
                         <li>
-                            <a href="{{ route('wardrobe') }}" data-title="Гардеробы/Тумбы"> Гардеробы / Тумбы </a>
+                            <a href="{{ route('wardrobe') }}" data-title="Гардеробы/Тумбы"> Гардероби / Тумби </a>
                         </li>
                         <li>
-                            <a href="{{ route('children') }}" data-title="Детская мебель"> Детская мебель </a>
+                            <a href="{{ route('children') }}" data-title="Дитячі меблі"> Дитячі меблі </a>
                         </li>
                         <li class="d-flex align-items-center justify-content-center">
                             <a href="{{ route('landing') }}#contact-form" data-title="Контакты" class="btn btn-tertiary btn-small-font btn-secondary has-radius-huge"> Перезвонить </a>

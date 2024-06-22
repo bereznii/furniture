@@ -6,19 +6,19 @@
                     <div class="footer-nav inline-nav">
                         <ul>
                             <li>
-                                <a href="{{ route('kitchen') }}" data-title="Кухни"> Кухни </a>
+                                <a href="{{ route('kitchen') }}" data-title="Кухні"> Кухні </a>
                             </li>
                             <li>
-                                <a href="{{ route('hall') }}" data-title="Шкафы/Прихожие"> Шкафы / Прихожие </a>
+                                <a href="{{ route('hall') }}" data-title="Шкафы/Прихожие"> Шафи / Передпокій </a>
                             </li>
                             <li>
-                                <a href="{{ route('commercial') }}" data-title="Офисная/Торговая мебель"> Офисная / Торговая мебель </a>
+                                <a href="{{ route('commercial') }}" data-title="Офисная/Торговая мебель"> Офісні / Торгові меблі </a>
                             </li>
                             <li>
-                                <a href="{{ route('wardrobe') }}" data-title="Гардеробы/Тумбы"> Гардеробы / Тумбы </a>
+                                <a href="{{ route('wardrobe') }}" data-title="Гардеробы/Тумбы"> Гардероби / Тумби </a>
                             </li>
                             <li>
-                                <a href="{{ route('children') }}" data-title="Детская мебель"> Детская мебель </a>
+                                <a href="{{ route('children') }}" data-title="Дитячі меблі"> Дитячі меблі </a>
                             </li>
                         </ul>
                     </div>
@@ -34,7 +34,7 @@
     </div>
     <div class="footer-bottom text-center">
         <div class="container">
-            <p>© Copyright <b>Мебельный Мастер {{ date('Y') }}</b>. All Rights Reserved - Built by Me </p>
+            <p>© Copyright <b>Меблевий майстер {{ date('Y') }}</b>. All Rights Reserved - Built by Me </p>
         </div>
     </div>
 </footer>

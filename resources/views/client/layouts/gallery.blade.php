@@ -2,7 +2,7 @@
     <section class="content-block portfolio-block eighty-percent">
         <div class="container-fluid">
             <div class="demo-wrapper content-block text-center pt-0 pb-2">
-                <h2>Мои работы</h2>
+                <h2>Мої роботи</h2>
                 <div class="dotted-border"></div>
             </div>
             <div class="row d-flex align-items-center">
@@ -16,7 +16,7 @@
                                          alt="images description">
                                 </div>
                                 <div class="overlay-gallery">
-                                    Подробнее
+                                    Детальніше
                                 </div>
                             </figure>
                         </a>
